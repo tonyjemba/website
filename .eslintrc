@@ -1,0 +1,4 @@
+{
+    //using @antfu preset
+    "extends": "@antfu"
+}
