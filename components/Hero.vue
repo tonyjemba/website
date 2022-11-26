@@ -9,7 +9,7 @@ const colorMode = useColorMode()
   <div>
     <div class="w-full h-screen bg-cover bg-no-repeat bg-center " :class="`${colorMode.value === 'light' ? 'bgLight' : 'bgDark'}`">
       <div class="w-full h-full  flex flex-col justify-end">
-        <div>I am Tony Jemba</div>
+        <div>The header text goes here</div>
         <div class="w-full">
           <div v-show="colorMode.value === 'light'">
             <Landscapelight class="w-full  " />
