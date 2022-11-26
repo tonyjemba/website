@@ -13,11 +13,11 @@ onMounted(() => {
 
 <template>
   <div class="$dark-mode">
-    <TheNavigation />
-    <TheHero />
+    <Navigation />
+    <Hero />
     <div>
-      <TheProjectSection />
-      <TheAboutMe />
+      <ProjectSection />
+      <AboutMe />
     </div>
   </div>
 </template>

@@ -54,8 +54,8 @@ const colorMode = useColorMode()
         </div>
         <!-- below medium screens -->
         <div v-show="smallerThanMd" class="flex justify-end ">
-          <TheNavigationDrawerIcon />
-          <TheNavigationDrawer :is-open="isOpen" />
+          <NavigationDrawerIcon />
+          <NavigationDrawer :is-open="isOpen" />
         </div>
       </div>
     </div>
