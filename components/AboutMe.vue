@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Triangle from '~/assets/triangle.svg'
+</script>
+
 <template>
   <div class="w-full ">
     <TheTitle heading="About Me" />
@@ -20,7 +24,8 @@
               I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
-            <div>
+            <div class="flex items-center">
+              <div><Triangle /></div>
               <div>React</div>
             </div>
           </div>
