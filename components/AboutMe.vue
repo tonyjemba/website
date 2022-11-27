@@ -2,10 +2,10 @@
   <div class="w-full ">
     <TheTitle heading="About Me" />
 
-    <div class="w-11/12  flex justify-center mx-auto">
-      <div class=" w-10/12 flex justify-center mx-auto">
-        <div class="grow font-gsans">
-          <div class="w-5/6">
+    <div class="w-11/12  flex justify-center mx-auto ">
+      <div class=" sm:w-10/12 flex flex-col space-y-20 md:space-y-0 md:flex-row  justify-center mx-auto">
+        <div class="w-full md:grow font-gsans">
+          <div class=" space-y-6">
             <p>
               Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I
               decided to try editing custom Tumblr themes — turns
@@ -20,9 +20,14 @@
               I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
+            <div>
+              <div>React</div>
+            </div>
           </div>
         </div>
-        <div><ProfilePicture /></div>
+        <div class="flex w-full justify-center md:justify-end">
+          <ProfilePicture />
+        </div>
       </div>
     </div>
   </div>
