@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import Triangle from '~/assets/triangle.svg'
-</script>
-
 <template>
   <div class="w-full ">
     <TheTitle heading="About Me" />
@@ -11,7 +7,7 @@ import Triangle from '~/assets/triangle.svg'
         <div class="w-full md:grow font-gsans">
           <div class=" space-y-6">
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I
+              Hello! My name is Tony and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I
               decided to try editing custom Tumblr themes — turns
               out hacking together a custom reblog button taught me a lot about HTML & CSS!
             </p>
@@ -24,9 +20,13 @@ import Triangle from '~/assets/triangle.svg'
               I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
-            <div class="flex items-center">
-              <div><Triangle /></div>
-              <div>React</div>
+            <div class="grid grid-cols-2  gap-y-2 text-sm ">
+              <SkillsList skill="JavaScript (TypeScript)" />
+              <SkillsList skill="Cypress & Jest" />
+              <SkillsList skill="React (Next)" />
+              <SkillsList skill="Git" />
+              <SkillsList skill="vue (Nuxt)" />
+              <SkillsList skill="Node.js" />
             </div>
           </div>
         </div>
