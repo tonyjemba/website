@@ -1,5 +1,5 @@
 <template>
-  <TheTitle heading="Contact Me" underline-class="justify-start" />
+  <TheTitle heading="Get In Touch" underline-class="justify-start" />
   <div class="text-center">
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center">
       <div class="font-gsans ">
@@ -8,8 +8,8 @@
         best to get back to you!
       </div>
       <div class="flex justify-center my-8 mb-56">
-        <div class=" cursor-pointer textLcolor border rounded resume-btn">
-          <div class="text-center mt-3 mb-3 mr-5 ml-5 ">
+        <div class=" cursor-pointer  textLcolor   border rounded resume-btn">
+          <div class="text-center mt-3 mb-3 mr-5 ml-5 font-gsans font-bold">
             Contact me
           </div>
         </div>
@@ -24,16 +24,26 @@
   transition: color .3s ease-in-out;
 }
 .textLcolor {
-  color: black;
-  transition: color .3s ease-in-out;
-}
-.textLcolor:hover {
   color: #00FFE1;
-  transition: color .3s ease-in-out;
 }
-.resume-btn {
+.light-mode .textLcolor {
+  transition: color .3s ease-in-out;
+
+  color: rgba(0,0,0,0.8);
+}
+.light-mode .textLcolor:hover{
+  transition: color .3s ease-in-out;
+
+  color: #00FFE1;
+}
+.dark-mode .resume-btn {
   border-color: #00FFE1;
-  background-color: #00ffe100;
+  background-color: #061428;
+  transition: background-color .3s ease-in-out;
+}
+.light-mode .resume-btn {
+  border-color: #00FFE1;
+  background-color: #f1f1f1;
   transition: background-color .3s ease-in-out;
 }
 .resume-btn:hover {
