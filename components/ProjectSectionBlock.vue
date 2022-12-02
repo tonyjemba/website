@@ -42,9 +42,9 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
         </div>
       </div>
     </div>
-    <!-- make the height auto -->
+    <!-- mobile -->
     <div v-show="!mdAndLarger" class="w-11/12 flex  justify-center mx-auto rounded ">
-      <div class="w-full sm:w-10/12 mb-20 h-auto fallbackcolor rounded bgImageMobile">
+      <div class="w-full sm:w-10/12 mb-20 h-auto fallbackcolor rounded bgImageMobile ">
         <div class="  w-full p-6 overlayMobile rounded">
           <div class="font-gsans mb-1 titlecolor">
             Featured Project
