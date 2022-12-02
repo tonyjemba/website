@@ -1,6 +1,6 @@
 <template>
   <div class="w-full ">
-    <TheTitle heading="About Me" />
+    <TheTitle heading="About Me" underline-class="justify-start" />
 
     <div class="w-11/12  flex justify-center mx-auto ">
       <div class=" sm:w-10/12 flex flex-col space-y-20 md:space-y-0 md:flex-row  justify-center mx-auto">

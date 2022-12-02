@@ -16,8 +16,9 @@ onMounted(() => {
     <Navigation />
     <Hero />
     <div>
-      <ProjectSection />
       <AboutMe />
+      <ProjectSection />
+      <ContactSection />
     </div>
   </div>
 </template>
