@@ -7,7 +7,7 @@
         always open. Whether you have a question or just want to say hi, I’ll try my
         best to get back to you!
       </div>
-      <div class="flex justify-center my-8">
+      <div class="flex justify-center my-8 mb-56">
         <div class=" cursor-pointer textLcolor border rounded resume-btn">
           <div class="text-center mt-3 mb-3 mr-5 ml-5 ">
             Contact me

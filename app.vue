@@ -20,6 +20,9 @@ onMounted(() => {
       <ProjectSection />
       <ContactSection />
     </div>
+    <footer>
+      <TheFooter />
+    </footer>
   </div>
 </template>
 

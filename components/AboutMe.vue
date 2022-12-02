@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full ">
+  <div class="w-full mt-56 mb-64">
     <TheTitle heading="About Me" underline-class="justify-start" />
 
     <div class="w-11/12  flex justify-center mx-auto ">

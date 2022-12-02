@@ -8,7 +8,7 @@ const props = defineProps<Props>()
 
 <template>
   <div class="w-full  flex justify-center">
-    <div class="text-3xl sm:text-4xl text-center font-jost  my-16 sm:my-24 font-bold headingColor">
+    <div class="text-3xl sm:text-4xl text-center font-jost  mb-16 sm:mb-24 font-bold headingColor">
       {{ props.heading }}
       <div class="w-full flex" :class="props.underlineClass">
         <div class="h-1 w-1/4 undercolor my-1 self-end rounded" />
