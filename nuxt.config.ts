@@ -17,4 +17,12 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  head: {
+    title: 'Tony Jemba',
+    script: [
+      {
+       src:'https://cdn.jsdelivr.net/npm/mariordev/mailtoui@1.0.3/dist/mailtoui-min.js', defer:true
+      }
+    ]
+  }
 })

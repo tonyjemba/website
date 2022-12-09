@@ -23,21 +23,23 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
             Featured Project
           </div>
           <div class="font-jost  text-2xl mb-4 headingColor">
-            Grabit Ecommerce
+            UVote System web
           </div>
           <div class="descriptionbg rounded font-gsans my-3 p-3 shadow-2xl">
-            A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.
+            This is a web based version of the UVote system that was used during the 2021 presidential elections, I was hired to make this system,
+            within the shortest time possible. It is now a legacy system with some dependencies deprecated which makes some features not to work like
+            they used to be.
           </div>
           <div class="flex  gap-x-3.5 my-3" :class="props.alter ? ' justify-end' : ' justify-start'">
-            <div>VS Code</div> <div>Atom</div> <div>Typescript</div>
+            <div>React</div> <div>Firebase</div> <div>JavaScript</div> <div>Redux</div>
           </div>
           <div class="flex  gap-x-4 mt-6" :class="props.alter ? ' justify-end' : ' justify-start'">
-            <div>
+            <a href="https://github.com/tonyjemba/Presidential_campaign_App" target="_blank" >
               <GithubLogo class="cursor-pointer iconColor iconModeColor" />
-            </div>
-            <div>
+            </a>
+            <a href="https://projectk21-1a365.web.app/" target="_blank">
               <DemoLink class="cursor-pointer iconColor iconModeColor" />
-            </div>
+            </a>
           </div>
         </div>
       </div>

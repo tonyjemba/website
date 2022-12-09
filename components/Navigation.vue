@@ -27,21 +27,21 @@ const colorMode = useColorMode()
       <div class="  flex ">
         <!-- medium and above screens -->
         <div v-show="mdAndLarger" class=" flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
-          <div class="cursor-pointer textLcolor ">
+          <a class="cursor-pointer textLcolor ">
             Home
-          </div>
-          <div class="cursor-pointer textLcolor">
+          </a>
+          <a class="cursor-pointer textLcolor" href="#projects" >
             Projects
-          </div>
-          <div class="cursor-pointer textLcolor">
+          </a>
+          <a class="cursor-pointer textLcolor" href="#about">
             About Me
-          </div>
-          <div class="cursor-pointer textLcolor">
+          </a>
+          <a class="cursor-pointer textLcolor" href="https://medium.com/@tonyjemba" target="_blank">
             Blog
-          </div>
-          <div class="cursor-pointer textLcolor">
+          </a>
+          <a class="cursor-pointer textLcolor" href="#contact">
             Contact
-          </div>
+          </a>
           <div class="cursor-pointer textLcolor border rounded resume-btn ">
             <div class="text-center mt-1 mb-2 mr-3 ml-3 colored">
               Resume

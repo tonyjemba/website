@@ -16,6 +16,6 @@ const isHovered = useElementHover(myHoverableElement)
    border-color: #00FFE1 ;
 }
 .bpic {
-    background-image: url('~/assets/me.jpg');
+    background-image: url('~/assets/mypic.PNG');
 }
 </style>
