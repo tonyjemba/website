@@ -30,11 +30,11 @@ const colorMode = useColorMode()
           <a class="cursor-pointer textLcolor ">
             Home
           </a>
-          <a class="cursor-pointer textLcolor" href="#projects" >
-            Projects
-          </a>
           <a class="cursor-pointer textLcolor" href="#about">
             About Me
+          </a>
+          <a class="cursor-pointer textLcolor" href="#projects" >
+            Projects
           </a>
           <a class="cursor-pointer textLcolor" href="https://medium.com/@tonyjemba" target="_blank">
             Blog
@@ -42,8 +42,8 @@ const colorMode = useColorMode()
           <a class="cursor-pointer textLcolor" href="#contact">
             Contact
           </a>
-          <div class="cursor-pointer textLcolor border rounded resume-btn ">
-            <div class="text-center mt-1 mb-2 mr-3 ml-3 colored">
+          <div class="cursor-pointer textLcolor bg-opacity-0 border rounded border-mycyan ">
+            <div class="text-center mt-1 mb-2 bg-opacity-0 mr-3 ml-3 ">
               Resume
             </div>
           </div>
@@ -63,21 +63,13 @@ const colorMode = useColorMode()
 </template>
 
 <style scoped>
-.resume-btn {
-  border-color: #00FFE1;
-  background-color: #00ffe100;
-  transition: background-color .3s ease-in-out;
-}
-.resume-btn:hover {
-  background-color: #00ffe11a;
-  transition: background-color .3s ease-in-out;
-}
 .textLcolor {
   color: black;
   transition: color .3s ease-in-out;
 }
 .textLcolor:hover {
   color: #00FFE1;
+  background-color: #00ffe11a;
   transition: color .3s ease-in-out;
 }
 
@@ -103,8 +95,5 @@ const colorMode = useColorMode()
 .dark-mode .iconModeColor:hover {
   fill: #00FFE1;
    transition: color .3s ease-in-out;
-}
-.dark-mode .colored {
-    color: #00FFE1;
 }
 </style>

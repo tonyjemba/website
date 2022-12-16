@@ -15,10 +15,10 @@ const colorMode = useColorMode()
         Home
       </div>
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
-        Projects
+        About Me
       </div>
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
-        About Me
+        Projects
       </div>
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
         Blog

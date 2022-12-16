@@ -7,7 +7,7 @@
       </div>
       <div class="flex justify-center my-8 mb-56">
         <a href="mailto:jjembatony@gmail.com">
-          <div class=" cursor-pointer  textLcolor   border rounded resume-btn">
+          <div class=" cursor-pointer  textLcolor  bg-opacity-0 border rounded border-mycyan">
             <div class="text-center mt-3 mb-3 mr-5 ml-5 font-gsans font-bold">
               Contact me
             </div>
@@ -34,20 +34,10 @@
 }
 .light-mode .textLcolor:hover{
   transition: color .3s ease-in-out;
-
+  background-color: #00ffe11a;
   color: #00FFE1;
 }
-.dark-mode .resume-btn {
-  border-color: #00FFE1;
-  background-color: #061428;
-  transition: background-color .3s ease-in-out;
-}
-.light-mode .resume-btn {
-  border-color: #00FFE1;
-  background-color: #f1f1f1;
-  transition: background-color .3s ease-in-out;
-}
-.resume-btn:hover {
+.dark-mode .textLcolor:hover {
   background-color: #00ffe11a;
   transition: background-color .3s ease-in-out;
 }
