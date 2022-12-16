@@ -42,8 +42,8 @@ const colorMode = useColorMode()
           <a class="cursor-pointer textLcolor" href="#contact">
             Contact
           </a>
-          <div class="cursor-pointer textLcolor bg-opacity-0 border rounded border-mycyan ">
-            <div class="text-center mt-1 mb-2 bg-opacity-0 mr-3 ml-3 ">
+          <div class="cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan ">
+            <div class="text-center pt-2 pb-2 pl-3 pr-3 ">
               Resume
             </div>
           </div>
@@ -67,7 +67,7 @@ const colorMode = useColorMode()
   color: black;
   transition: color .3s ease-in-out;
 }
-.textLcolor:hover {
+.textL2color:hover {
   color: #00FFE1;
   background-color: #00ffe11a;
   transition: color .3s ease-in-out;

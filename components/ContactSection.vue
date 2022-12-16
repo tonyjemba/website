@@ -8,7 +8,7 @@
       <div class="flex justify-center my-8 mb-56">
         <a href="mailto:jjembatony@gmail.com">
           <div class=" cursor-pointer  textLcolor  bg-opacity-0 border rounded border-mycyan">
-            <div class="text-center mt-3 mb-3 mr-5 ml-5 font-gsans font-bold">
+            <div class="text-center pt-3 pb-3 pr-5 pl-5 font-gsans font-bold">
               Contact me
             </div>
           </div>
