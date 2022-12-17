@@ -19,8 +19,8 @@ const colorMode = useColorMode()
           <div class="w-full ">
             <div class=" w-11/12 mx-auto flex">
               <div class=" w-2/4 text-lg space-y-6">
-                <div class="font-jost fonts1 ">Hello I'm</div>
-                <div class="font-jost fonts2 font-bold">Tony Jemba</div>
+                <div class="font-jost fonts1 c2">Hello I'm</div>
+                <div class="font-jost fonts2 font-bold c1">Tony Jemba</div>
                 <div class="font-jost fonts3"> A Software Engineer From Kampala</div>
                 <div class="font-jost fonts4 ">I'm a creative software engineer based in Kampala, and I'm very
                   passionate and dedicated to my work.</div>
@@ -89,15 +89,13 @@ const colorMode = useColorMode()
 }
 
 .light-mode .textLcolor {
-  transition: color .3s ease-in-out;
-
   color: rgba(0, 0, 0, 0.8);
+  transition: color .3s ease-in-out;
 }
 
 .light-mode .textLcolor:hover {
-  transition: color .3s ease-in-out;
-
   color: #00FFE1;
+    transition: color .3s ease-in-out;
 }
 
 .dark-mode .resume-btn {
@@ -145,9 +143,17 @@ const colorMode = useColorMode()
   fill: #00FFE1;
   transition: color .3s ease-in-out;
 }
-
+.dark-mode .c1{
+  color: #ccd6f6;
+  transition: color .3s ease-in-out;
+}
+.dark-mode .c2 {
+  color: #00FFE1;
+  transition: color .3s ease-in-out;
+}
 .fonts2 {
   font-size: 3em;
+ 
 }
 
 .fonts3 {
