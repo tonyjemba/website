@@ -6,6 +6,7 @@ import LinkedIn from '~/assets/linkedin.svg'
 import Twitter from '~/assets/twitter.svg'
 import Youtube from '~/assets/youtube.svg'
 import Medium from '~/assets/medium.svg'
+import Blob from '~/assets/blob.svg'
 
 const colorMode = useColorMode()
 </script>
@@ -27,7 +28,7 @@ const colorMode = useColorMode()
                 <div class="flex gap-x-14">
                   <div class="cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan ">
                     <div class="text-center pt-2 pb-2 pl-5 pr-5 ">
-                      <div class="textLcolor">Hire Me</div>
+                      <div class="textLcolor font-jost">Hire Me</div>
                     </div>
                   </div>
                   <div class="flex gap-x-5 items-center">
@@ -51,7 +52,7 @@ const colorMode = useColorMode()
                 </div>
               </div>
               <div class=" w-2/4 flex justify-center items-center">
-                <div>pallett</div>
+                <div><Blob/></div>
               </div>
             </div>
           </div>
