@@ -6,7 +6,22 @@ import LinkedIn from '~/assets/linkedin.svg'
 import Twitter from '~/assets/twitter.svg'
 import Youtube from '~/assets/youtube.svg'
 import Medium from '~/assets/medium.svg'
-import Blob from '~/assets/blob.svg'
+// import { onMounted, onUnmounted, ref } from 'vue';
+// import gsap from 'gsap';
+
+// const main = ref();
+// const ctx = ref();
+
+// onMounted(() => {
+//   ctx.value = gsap.context((self) => {
+//     // const box = self.selector('.box');
+//     gsap.to('.blobl', { duration: 2, morphSVG: '.blob2' })
+//   })
+// })
+// onUnmounted(() => {
+//   ctx.value.revert(); // <- Easy Cleanup!
+// });
+
 
 const colorMode = useColorMode()
 </script>
@@ -21,7 +36,7 @@ const colorMode = useColorMode()
             <div class=" w-11/12 mx-auto flex">
               <div class=" w-2/4 text-lg space-y-6">
                 <div class="font-jost fonts1 c2">Hello I'm</div>
-                <div class="font-jost fonts2 font-bold c1">Tony Jemba</div>
+                <div class="font-jost fonts2 font-bold c1 target-class">Tony Jemba</div>
                 <div class="font-jost fonts3"> A Software Engineer From Kampala</div>
                 <div class="font-jost fonts4 ">I'm a creative software engineer based in Kampala, and I'm very
                   passionate and dedicated to my work.</div>
@@ -52,7 +67,23 @@ const colorMode = useColorMode()
                 </div>
               </div>
               <div class=" w-2/4 flex justify-center items-center">
-                <div><Blob/></div>
+                <div>
+                  <svg id="visual" viewBox="0 0 900 900" width="320" height="320" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <g transform="translate(395.3409694537647 549.129049274956)">
+                      <path class="blobl"
+                        d="M254.5 -197.9C345.9 -88.4 447.2 18.4 428.1 96C409 173.5 269.6 221.9 162.9 232.7C56.3 243.5 -17.6 216.8 -93.9 184.2C-170.2 151.6 -248.9 113.2 -290.1 36.5C-331.2 -40.1 -334.9 -155.1 -280.3 -256.2C-225.7 -357.3 -112.8 -444.7 -15.6 -432.2C81.6 -419.7 163.1 -307.4 254.5 -197.9"
+                        fill="#4E5466">
+                      </path>
+                    </g>
+                    <g transform="translate(486.5623892955482 539.9985897735369)">
+                      <path class="blob2"
+                        d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
+                        fill="#4E5466">
+                      </path>
+                    </g>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>

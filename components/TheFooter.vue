@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+
 <template>
   <div class="w-full  text-center">
     <div   class="font-gsans text-sm my-4 cursor-pointer textLcolor mb-4"  >

@@ -9,7 +9,9 @@ export default defineNuxtConfig({
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found
   },
+  build:{ transpile: ['gsap']},
   typescript: {
     strict: true,
-  }
+  },
+
 })
