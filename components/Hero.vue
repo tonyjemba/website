@@ -77,7 +77,7 @@ onMounted(()=>{
                       </path>
                     </g>
                     <g transform="translate(486.5623892955482 539.9985897735369)">
-                      <path ref="blob2"
+                      <path ref="blob2" class="invisible"
                         d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
                         fill="#4E5466">
                       </path>
@@ -135,7 +135,9 @@ onMounted(()=>{
   background-color: #061428;
   transition: background-color .3s ease-in-out;
 }
-
+.min{
+  color: #475170;
+}
 .light-mode .resume-btn {
   border-color: #00FFE1;
   background-color: #f1f1f1;
