@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
+import { ref } from 'vue'
+import { onClickOutside } from '@vueuse/core'
 import LogoLight from '~/assets/logo-light.svg'
 import Logodark from '~/assets/logo-dark.svg'
 import LightIcon from '~/assets/sun.svg'
@@ -10,9 +12,16 @@ import { useDrawerStore } from '~~/stores/drawer'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const mdAndLarger = breakpoints.greaterOrEqual('md')
 const smallerThanMd = breakpoints.smaller('md')
-const { isOpen } = storeToRefs(useDrawerStore())
+
+let { isOpen } = storeToRefs(useDrawerStore())
 
 const colorMode = useColorMode()
+const store = useDrawerStore()
+
+const target = ref()
+
+//click outside drawer to close it
+onClickOutside(target, () => store.isOpen = false)
 </script>
 
 <template>
@@ -33,7 +42,7 @@ const colorMode = useColorMode()
           <a class="cursor-pointer textLcolor" href="#about">
             About Me
           </a>
-          <a class="cursor-pointer textLcolor" href="#projects" >
+          <a class="cursor-pointer textLcolor" href="#projects">
             Projects
           </a>
           <a class="cursor-pointer textLcolor" href="https://medium.com/@tonyjemba" target="_blank">
@@ -48,14 +57,16 @@ const colorMode = useColorMode()
             </div>
           </div>
           <div>
-            <DarkIcon v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor" @click="colorMode.value = 'dark'" />
-            <LightIcon v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor " @click="colorMode.value = 'light'" />
+            <DarkIcon v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"
+              @click="colorMode.value = 'dark'" />
+            <LightIcon v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor "
+              @click="colorMode.value = 'light'" />
           </div>
         </div>
         <!-- below medium screens -->
         <div v-show="smallerThanMd" class="flex justify-end ">
           <NavigationDrawerIcon />
-          <NavigationDrawer :is-open="isOpen" />
+          <NavigationDrawer ref="target" :is-open="isOpen" />
         </div>
       </div>
     </div>
@@ -67,6 +78,7 @@ const colorMode = useColorMode()
   color: black;
   transition: color .3s ease-in-out;
 }
+
 .textL2color:hover {
   color: #00FFE1;
   background-color: #00ffe11a;
@@ -75,25 +87,30 @@ const colorMode = useColorMode()
 
 .iconColor {
   fill: black;
-   transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
+
 .iconColor:hover {
-   fill: #00FFE1;
-   transition: color .3s ease-in-out;
+  fill: #00FFE1;
+  transition: color .3s ease-in-out;
 }
+
 .dark-mode .textLcolor {
   color: #8892B0;
   transition: color .3s ease-in-out;
 }
+
 .dark-mode .textLcolor:hover {
   color: #00FFE1;
   transition: color .3s ease-in-out;
 }
+
 .dark-mode .iconModeColor {
- fill: #8892B0
+  fill: #8892B0
 }
+
 .dark-mode .iconModeColor:hover {
   fill: #00FFE1;
-   transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 </style>

@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { useDrawerStore } from '~~/stores/drawer'
-const state = reactive({ open: false })
 
+//using drawer state to change icon
 const drawerStore = useDrawerStore()
 </script>
 
 <template>
   <div>
-    <div class="relative z-50 sm:max-w-xl mx-auto" @click="state.open = !state.open">
-      <button class=" w-10 h-10 relative hamburgerColor focus:outline-none hamburger bg-white " @click="drawerStore.changeStatus()">
-        <div class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
-          <span aria-hidden="true" class="block absolute h-0.5 w-7 bg-current transform transition duration-500 ease-in-out" :class="{ 'rotate-45': state.open, ' -translate-y-1.5': !state.open }" />
-          <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current   transform transition duration-500 ease-in-out" :class="{ 'opacity-0': state.open } " />
-          <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform  transition duration-500 ease-in-out" :class="{ '-rotate-45': state.open, ' translate-y-1.5': !state.open }" />
+    <div class="relative   sm:max-w-xl mx-auto" >
+      <button class=" w-10 h-10 relative  hamburgerColor focus:outline-none hamburger bg-white " @click="drawerStore.changeStatus()">
+        <div class="block w-5 absolute  left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
+          <span aria-hidden="true" class="block absolute h-0.5 w-7 bg-current transform transition duration-500 ease-in-out" :class="{ 'rotate-45': drawerStore.isOpen, ' -translate-y-1.5': !drawerStore.isOpen }" />
+          <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current   transform transition duration-500 ease-in-out" :class="{ 'opacity-0': drawerStore.isOpen } " />
+          <span aria-hidden="true" class="block absolute  h-0.5 w-7 bg-current transform  transition duration-500 ease-in-out" :class="{ '-rotate-45': drawerStore.isOpen, ' translate-y-1.5': !drawerStore.isOpen }" />
         </div>
       </button>
     </div>
