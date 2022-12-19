@@ -73,7 +73,7 @@ onMounted(() => {
               </div>
               <div v-show="lgAndLarger" class=" w-2/4 flex justify-center items-center ">
                 <div>
-                  <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg"
+                  <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg" 
                     xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.1">
                   <svg width="100px" height="100px" viewBox="0 -14 256 256" class="opacity-5"  version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
@@ -84,7 +84,7 @@ onMounted(() => {
                     </g>
                   </svg>
                     <g transform="translate(395.3409694537647 549.129049274956)">
-                      <path ref="blobl" class="opacity-5"
+                      <path ref="blobl" class="opacity-10"
                         d="M254.5 -197.9C345.9 -88.4 447.2 18.4 428.1 96C409 173.5 269.6 221.9 162.9 232.7C56.3 243.5 -17.6 216.8 -93.9 184.2C-170.2 151.6 -248.9 113.2 -290.1 36.5C-331.2 -40.1 -334.9 -155.1 -280.3 -256.2C-225.7 -357.3 -112.8 -444.7 -15.6 -432.2C81.6 -419.7 163.1 -307.4 254.5 -197.9"
                         fill="#8892b0">
                         
@@ -99,7 +99,7 @@ onMounted(() => {
                       </svg>
                     </g>
                     <g transform="translate(486.5623892955482 539.9985897735369)">
-                      <path ref="blob2" class="invisible opacity-5"
+                      <path ref="blob2" class="invisible opacity-10"
                         d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
                         fill="#8892b0">
                       </path>
@@ -169,7 +169,9 @@ onMounted(() => {
   background-color: #061428;
   transition: background-color .3s ease-in-out;
 }
-
+.light-mode .blob{
+  fill: #323231;
+}
 .min {
   color: #475170;
 }

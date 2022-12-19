@@ -9,7 +9,7 @@ const colorMode = useColorMode()
 </script>
 
 <template>
-  <div class="fixed z-40 top-0 right-0 h-screen p-4 overflow-y-auto drawerbg sm:w-3/5 w-4/5 " :class="props.isOpen ? 'onScreen' : 'offScreen'">
+  <div class="fixed bg-red-500 z-40 top-0 right-0 h-screen p-4 overflow-y-auto drawerbg sm:w-3/5 w-4/5 " :class="props.isOpen ? 'onScreen' : 'offScreen'">
     <div class="flex flex-col gap-y-8 w-full h-full justify-center items-center ">
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
         Home
@@ -32,7 +32,7 @@ const colorMode = useColorMode()
             Resume
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center ">
           <DarkIcon v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor" @click="colorMode.value = 'dark'" />
           <LightIcon v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor " @click="colorMode.value = 'light'" />
         </div>
@@ -42,8 +42,11 @@ const colorMode = useColorMode()
 </template>
 
 <style scoped>
-.drawerbg {
- background-color:#596c90 ;
+.dark-mode .drawerbg {
+ background-color:#061428 ;
+}
+.light-mode .drawerbg {
+  background-color: #f1f1f1;
 }
 .offScreen {
     transform: translateX(100%);
