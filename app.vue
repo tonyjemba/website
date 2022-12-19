@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import { onBeforeMount, onMounted } from 'vue'
-import gsap from 'gsap'
-// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-
-//registering gsap plugin for morphing svgs in the hero section
-// gsap.registerPlugin(MorphSVGPlugin);
 
 const colorMode = useColorMode()
 onBeforeMount(() => {
