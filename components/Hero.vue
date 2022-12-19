@@ -18,7 +18,7 @@ onMounted(()=>{
     blobl.value,
     {path: blobl.value},
     {path: blob2.value},
-    {repeat:999,duration:5000,yoyo:true}
+    {repeat:999,duration:8000,yoyo:true}
   ).start()
  
 })
@@ -34,7 +34,7 @@ onMounted(()=>{
         <div class="w-full h-screen     absolute flex items-center">
           <div class="w-full ">
             <div class=" w-11/12 mx-auto flex">
-              <div class=" w-2/4 text-lg space-y-6">
+              <div class=" w-2/4 text-lg space-y-10">
                 <div class="font-jost fonts1 c2 water">Hello I'm</div>
                 <div class="font-jost fonts2 font-bold c1 " >Tony Jemba</div>
                 <div class="font-jost fonts3"> A Software Engineer From Kampala</div>
@@ -68,21 +68,20 @@ onMounted(()=>{
               </div>
               <div class=" w-2/4 flex justify-center items-center">
                 <div >
-                  <svg id="visual" viewBox="0 0 900 900" width="320" height="320" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                    <g transform="translate(395.3409694537647 549.129049274956)">
-                      <path ref="blobl"
-                        d="M254.5 -197.9C345.9 -88.4 447.2 18.4 428.1 96C409 173.5 269.6 221.9 162.9 232.7C56.3 243.5 -17.6 216.8 -93.9 184.2C-170.2 151.6 -248.9 113.2 -290.1 36.5C-331.2 -40.1 -334.9 -155.1 -280.3 -256.2C-225.7 -357.3 -112.8 -444.7 -15.6 -432.2C81.6 -419.7 163.1 -307.4 254.5 -197.9"
-                        fill="#4E5466">
-                      </path>
-                    </g>
-                    <g transform="translate(486.5623892955482 539.9985897735369)">
-                      <path ref="blob2" class="invisible"
-                        d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
-                        fill="#4E5466">
-                      </path>
-                    </g>
-                  </svg>
+                <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                  <g transform="translate(475.1402199656163 527.8742822389166)">
+                    <path ref="blobl" class="shadow-2xl"
+                      d="M294.4 -282.3C328.6 -191.8 267.2 -72.4 223.7 24.3C180.3 121.1 155 195.2 95.2 240.4C35.4 285.6 -58.9 301.8 -125.5 267.2C-192.1 232.6 -231.1 147.1 -278.9 35.6C-326.6 -75.8 -383.2 -213.3 -338.2 -306.2C-293.2 -399.1 -146.6 -447.6 -8.3 -441C130 -434.4 260.1 -372.7 294.4 -282.3"
+                      fill="#4E5466"></path>
+                  </g>
+                  <g transform="translate(511.4321748026821 490.00964863409973)">
+                    <path ref="blob2" class="invisible shadow-2xl"
+                      d="M327.5 -311.5C361.7 -218.2 283.7 -85.6 232.6 18.9C181.5 123.5 157.4 200 86.9 267.3C16.5 334.6 -100.2 392.5 -209.7 366.3C-319.1 340.2 -421.3 229.8 -450.1 103C-478.8 -23.8 -434.1 -167.2 -346.8 -272.6C-259.6 -378 -129.8 -445.5 8.4 -452.2C146.6 -458.9 293.2 -404.8 327.5 -311.5"
+                      fill="#4E5466"></path>
+                  </g>
+                  
+                </svg>
                 </div>
               </div>
             </div>
@@ -186,7 +185,7 @@ onMounted(()=>{
   transition: color .3s ease-in-out;
 }
 .fonts2 {
-  font-size: 3em;
+  font-size: 4em;
  
 }
 
