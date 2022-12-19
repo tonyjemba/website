@@ -18,14 +18,15 @@ let { isOpen } = storeToRefs(useDrawerStore())
 const colorMode = useColorMode()
 const store = useDrawerStore()
 
-const target = ref()
+const target = ref(null)
 
 //click outside drawer to close it
 onClickOutside(target, () => store.isOpen = false)
+
 </script>
 
 <template>
-  <div class="w-full z-10 absolute">
+  <div class="w-full  absolute">
     <div class="w-11/12 flex justify-between  mx-auto  pt-8 pb-4">
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />
@@ -64,9 +65,9 @@ onClickOutside(target, () => store.isOpen = false)
           </div>
         </div>
         <!-- below medium screens -->
-        <div v-show="smallerThanMd" class="flex justify-end ">
-          <NavigationDrawerIcon />
-          <NavigationDrawer ref="target" :is-open="isOpen" />
+        <div ref="target" v-show="smallerThanMd" class="flex justify-end z-50 ">
+          <NavigationDrawerIcon  :status="store.changeStatus" />
+          <NavigationDrawer  :is-open="isOpen" />
         </div>
       </div>
     </div>

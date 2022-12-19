@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import LightIcon from '~/assets/sun.svg'
 import DarkIcon from '~/assets/moon.svg'
+import { useDrawerStore } from '~~/stores/drawer'
 
 //opening and closing drawer basing on the isOpen prop value
 interface Props {
@@ -9,14 +10,14 @@ interface Props {
 
 const props = defineProps<Props>()
 const colorMode = useColorMode()
-
+const store = useDrawerStore()
 </script>
 
 <template>
-  <div  class="fixed bg-red-500 z-40 top-0 right-0 h-screen p-4 overflow-y-auto drawerbg sm:w-3/5 w-4/5 "
+  <div  class="fixed bg-red-500 z-30 top-0 right-0 h-screen p-4 overflow-y-hidden drawerbg sm:w-3/5 w-4/5 "
     :class="props.isOpen ? 'onScreen' : 'offScreen'">
     <div class="w-full  flex justify-start pt-4 ">
-      <NavigationDrawerIcon />
+      <NavigationDrawerIcon :status="store.changeStatus"/>
     </div>
     <div  class="flex flex-col gap-y-8 w-full h-full justify-center items-center ">
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
