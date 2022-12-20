@@ -91,8 +91,11 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
 .bgImage:hover {
   background-position:bottom;
 }
-.overlayMobile {
+.dark-mode .overlayMobile {
 background-color: #112240fb;
+}
+.light-mode .overlayMobile {
+  background-color: #f1f1f1f6;
 }
 .wid {
     width: 60%;

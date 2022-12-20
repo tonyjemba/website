@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
+import { ref ,onMounted} from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import LogoLight from '~/assets/logo-light.svg'
 import Logodark from '~/assets/logo-dark.svg'
@@ -19,14 +19,17 @@ const colorMode = useColorMode()
 const store = useDrawerStore()
 
 const target = ref(null)
-
 //click outside drawer to close it
 onClickOutside(target, () => store.isOpen = false)
 
+//animations
+onMounted(()=>{
+  useScrollReveal('.navMenu','30px','top',1000,1000)
+})
 </script>
 
 <template>
-  <div class="w-full  absolute">
+  <div class="w-full z-30  absolute">
     <div class="w-11/12 flex justify-between  mx-auto  pt-8 pb-4">
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />
@@ -36,8 +39,8 @@ onClickOutside(target, () => store.isOpen = false)
       </div>
       <div class="  flex ">
         <!-- medium and above screens -->
-        <div v-show="mdAndLarger" class=" flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
-          <a class="cursor-pointer textLcolor ">
+        <div v-show="mdAndLarger"  class="navMenu flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
+          <a class="cursor-pointer textLcolor " ref="home">
             Home
           </a>
           <a class="cursor-pointer textLcolor" href="#about">
@@ -65,7 +68,7 @@ onClickOutside(target, () => store.isOpen = false)
           </div>
         </div>
         <!-- below medium screens -->
-        <div ref="target" v-show="smallerThanMd" class="flex justify-end z-50 ">
+        <div ref="target" v-show="smallerThanMd" class="flex justify-end z-50  ">
           <NavigationDrawerIcon  :status="store.changeStatus" />
           <NavigationDrawer  :is-open="isOpen" />
         </div>
