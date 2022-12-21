@@ -1,8 +1,18 @@
+<script setup lang="ts">
+import {onMounted} from 'vue'
+
+//animations
+onMounted(() => {
+  useScrollReveal('.about', '40px', 'bottom', 300, 1000)
+  useScrollReveal('.about2', '40px', 'bottom', 500, 1000)
+
+})
+</script>
 <template>
   <div class="w-full mt-32 md:mt-56 mb-44 md:mb-64">
-    <TheTitle heading="About Me" underline-class="justify-start" />
+    <TheTitle class="about" heading="About Me" underline-class="justify-start" />
 
-    <div class="w-11/12  flex justify-center mx-auto " id="about">
+    <div class=" about w-11/12  flex justify-center mx-auto about2">
       <div class=" sm:w-10/12 flex flex-col space-y-20 md:space-y-0 md:flex-row  justify-center mx-auto">
         <div class="w-full md:grow font-gsans">
           <div class=" space-y-6">

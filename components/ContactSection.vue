@@ -1,6 +1,18 @@
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+//animations
+onMounted(() => {
+  useScrollReveal('.contact', '40px', 'bottom', 700, 1000)
+  useScrollReveal('.contact2', '40px', 'bottom', 800, 1000)
+
+
+
+})
+</script>
 <template>
-  <TheTitle heading="Get In Touch" underline-class="justify-start" />
-  <div class="text-center" id="contact">
+  <TheTitle heading="Get In Touch" underline-class="justify-start" class="contact"/>
+  <div class="text-center contact2" >
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center">
       <div class="font-gsans ">
         Are you having a project that you would want me to help you with or you want to hire me, Always feel free to reach me out through my email, I will respond to you immediately. Thankyou

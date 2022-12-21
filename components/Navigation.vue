@@ -24,7 +24,17 @@ onClickOutside(target, () => store.isOpen = false)
 
 //animations
 onMounted(()=>{
-  useScrollReveal('.navMenu','30px','top',1000,1000)
+  //logo
+  useScrollReveal('.logo', '10px', 'top', 100, 1000)
+  //navigation menu
+  useScrollReveal('.navMenu1','30px','top',300,1000)
+  useScrollReveal('.navMenu2', '30px', 'top', 400, 1000)
+  useScrollReveal('.navMenu3', '30px', 'top', 500, 1000)
+  useScrollReveal('.navMenu4', '30px', 'top', 600, 1000)
+  useScrollReveal('.navMenu5', '30px', 'top', 700, 1000)
+  useScrollReveal('.navMenu6', '30px', 'top', 800, 1000)
+  useScrollReveal('.navMenu7', '30px', 'top', 1000, 1000)
+
 })
 </script>
 
@@ -34,33 +44,33 @@ onMounted(()=>{
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />
       </div>
-      <div v-show="colorMode.value === 'dark'" class=" flex items-center cursor-pointer animate-fadeInImage">
+      <div v-show="colorMode.value === 'dark'" class="logo flex items-center cursor-pointer animate-fadeInImage">
         <Logodark />
       </div>
       <div class="  flex ">
         <!-- medium and above screens -->
-        <div v-show="mdAndLarger"  class="navMenu flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
-          <a class="cursor-pointer textLcolor " ref="home">
+        <div v-show="mdAndLarger"  class=" flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
+          <a class="cursor-pointer textLcolor navMenu1 " ref="home">
             Home
           </a>
-          <a class="cursor-pointer textLcolor" href="#about">
+          <a class="cursor-pointer textLcolor navMenu2" href="#about">
             About Me
           </a>
-          <a class="cursor-pointer textLcolor" href="#projects">
+          <a class="cursor-pointer textLcolor navMenu3" href="#projects">
             Projects
           </a>
-          <a class="cursor-pointer textLcolor" href="https://medium.com/@tonyjemba" target="_blank">
+          <a class="cursor-pointer textLcolor navMenu4" href="https://medium.com/@tonyjemba" target="_blank">
             Blog
           </a>
-          <a class="cursor-pointer textLcolor" href="#contact">
+          <a class="cursor-pointer textLcolor navMenu5" href="#contact">
             Contact
           </a>
-          <div class="cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan ">
+          <div class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan ">
             <div class="text-center pt-2 pb-2 pl-3 pr-3 ">
               Resume
             </div>
           </div>
-          <div>
+          <div class="navMenu7">
             <DarkIcon v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"
               @click="colorMode.value = 'dark'" />
             <LightIcon v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor "

@@ -28,7 +28,17 @@ onMounted(() => {
 
 })
 
+//animations
+onMounted(() => {
+  useScrollReveal('.target1', '30px', 'bottom', 1100, 1000)
+  useScrollReveal('.target2', '30px', 'bottom', 1200, 1000)
+  useScrollReveal('.target3', '30px', 'bottom', 1300, 1000)
+  useScrollReveal('.target4', '30px', 'bottom', 1400, 1000)
+  useScrollReveal('.target5', '30px', 'bottom', 1500, 1000)
+  useScrollReveal('.target6', '30px', 'right', 1600, 1000)
+  // useScrollReveal('.target7', '30px', 'bottom', 1900, 1000)
 
+})
 </script>
 
 <template>
@@ -40,12 +50,12 @@ onMounted(() => {
           <div class="w-full ">
             <div class=" w-11/12 mx-auto flex ">
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
-                <div class="font-jost fonts1 c2 water text-center md:text-left">Hello I'm</div>
-                <div class="font-jost fonts2 font-bold c1 text-center md:text-left ">Tony Jemba</div>
-                <div class="font-jost fonts3 text-center md:text-left" > A Software Engineer From Kampala</div>
-                <div class="font-jost fonts4 text-center md:text-left ">I'm a creative software engineer based in Kampala, and I'm very
+                <div class="font-jost fonts1 c2 water text-center md:text-left target1">Hello I'm</div>
+                <div class="font-jost fonts2 font-bold c1 text-center md:text-left target2">Tony Jemba</div>
+                <div class="font-jost fonts3 text-center md:text-left target3" > A Software Engineer From Kampala</div>
+                <div class="font-jost fonts4 text-center md:text-left target4">I'm a creative software engineer based in Kampala, and I'm very
                   passionate and dedicated to my work.</div>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-y-10  sm:gap-x-14  ">
+                <div class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10  sm:gap-x-14  ">
                   <div class=" cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan  ">
                     <div class="text-center pt-2 pb-2 pl-5 pr-5 ">
                       <div class="textLcolor font-jost">Hire Me</div>
@@ -71,7 +81,7 @@ onMounted(() => {
                   </div>
                 </div>
               </div>
-              <div v-show="lgAndLarger" class=" w-2/4 flex justify-center items-center ">
+              <div v-show="lgAndLarger" class="target6 w-2/4 flex justify-center items-center ">
                 <div>
                   <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg" 
                     xmlns:xlink="http://www.w3.org/1999/xlink"  version="1.1">
