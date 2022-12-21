@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted,ref } from 'vue'
+import { onBeforeMount, onMounted} from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+
 const colorMode = useColorMode()
 onBeforeMount(() => {
   colorMode.preference = 'dark'
@@ -21,7 +22,8 @@ const smallerThanMd = breakpoints.smaller('md')
 </script>
 
 <template>
-  <div class="$dark-mode relative">
+  <!-- <div class="bg-red-500" v-if="loading">Loading</div> -->
+  <div  class="$dark-mode relative">
     <!-- Drawer Overlay -->
     <div class="fixed top-0 z-20 " v-show="drawerStore.isOpen && smallerThanMd">
       <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>

@@ -5,9 +5,6 @@ export default defineNuxtConfig({
       'Open+Sans': [400, 500],
       'Jost': [500],
     }}]],
-  build: {
-    transpile: ['animejs'],
-  },
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found

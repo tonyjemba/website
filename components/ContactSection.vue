@@ -2,9 +2,10 @@
 import { onMounted } from 'vue';
 
 //animations
+
 onMounted(() => {
-  useScrollReveal('.contact', '40px', 'bottom', 700, 1000)
-  useScrollReveal('.contact2', '40px', 'bottom', 800, 1000)
+  useScrollReveal('.contact', '40px', 'bottom', 100, 1000,)
+  useScrollReveal('.contact2', '40px', 'bottom', 200, 1000,)
 
 
 
@@ -18,7 +19,7 @@ onMounted(() => {
         Are you having a project that you would want me to help you with or you want to hire me, Always feel free to reach me out through my email, I will respond to you immediately. Thankyou
       </div>
       <div class="flex justify-center my-8 mb-56">
-        <NuxtLink to="mailto:jjembatony@gmail.com">
+        <NuxtLink to="">
           <div class=" cursor-pointer  textLcolor  bg-opacity-0 border rounded border-mycyan">
             <div class="text-center pt-3 pb-3 pr-5 pl-5 font-gsans font-bold">
               Contact me

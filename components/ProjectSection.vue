@@ -2,11 +2,12 @@
 import { onMounted } from 'vue';
 
 //animations
+
 onMounted(() => {
-  useScrollReveal('.project', '40px', 'bottom', 300, 1000)
-  useScrollReveal('.project2', '40px', 'bottom', 400, 1000)
-  useScrollReveal('.project3', '40px', 'bottom', 500, 1000)
-  useScrollReveal('.project4', '40px', 'bottom', 600, 1000)
+  useScrollReveal('.project', '40px', 'bottom', 100, 1000, )
+  useScrollReveal('.project2', '40px', 'bottom', 150, 1000, )
+  useScrollReveal('.project3', '40px', 'bottom', 200, 1000, )
+  useScrollReveal('.project4', '40px', 'bottom', 250, 1000, )
 
 
 })
