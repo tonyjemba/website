@@ -4,8 +4,8 @@ import { onMounted } from 'vue';
 //animations
 
 onMounted(() => {
-  useScrollReveal('.contact', '40px', 'bottom', 100, 1000,)
-  useScrollReveal('.contact2', '40px', 'bottom', 200, 1000,)
+  useScrollReveal('.contact', '40px', 'bottom', 100, 500,)
+  useScrollReveal('.contact2', '40px', 'bottom', 200, 500,)
 
 
 

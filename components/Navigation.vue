@@ -31,13 +31,13 @@ onMounted(()=>{
   //logo
   useScrollReveal('.logo', '10px', 'top', 100, 1000, )
   //navigation menu
-  useScrollReveal('.navMenu1', '30px', 'top', 300, 1000, )
-  useScrollReveal('.navMenu2', '30px', 'top', 400, 1000, )
-  useScrollReveal('.navMenu3', '30px', 'top', 500, 1000, )
-  useScrollReveal('.navMenu4', '30px', 'top', 600, 1000, )
-  useScrollReveal('.navMenu5', '30px', 'top', 700, 1000, )
-  useScrollReveal('.navMenu6', '30px', 'top', 800, 1000, )
-  useScrollReveal('.navMenu7', '30px', 'top', 1000, 1000, )
+  useScrollReveal('.navMenu1', '30px', 'top', 300, 500, )
+  useScrollReveal('.navMenu2', '30px', 'top', 400, 500, )
+  useScrollReveal('.navMenu3', '30px', 'top', 500, 500, )
+  useScrollReveal('.navMenu4', '30px', 'top', 600, 500, )
+  useScrollReveal('.navMenu5', '30px', 'top', 700, 500, )
+  useScrollReveal('.navMenu6', '30px', 'top', 800, 500, )
+  useScrollReveal('.navMenu7', '30px', 'top', 1000, 500, )
 
 })
 </script>
