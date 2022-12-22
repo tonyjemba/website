@@ -14,7 +14,7 @@ export const useIconInterval = defineStore('iconInterval', {
     if (i > 4) {
       i = 1;
     }
-  }, 1000);
+  }, 8000);
     },
   },
 })

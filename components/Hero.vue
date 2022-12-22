@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints} from '@vueuse/core'
 import Landscapedark from '~/assets/land5.svg'
 import Landscapelight from '~/assets/landlight3.svg'
 import Github from '~/assets/github.svg'
@@ -20,6 +20,7 @@ const blobl = ref();
 const blob2 = ref();
 const vuelogo = ref()
 const showElement = ref(false)
+
 
 
 //switching icons
@@ -61,7 +62,7 @@ onMounted(() => {
             <div class=" w-11/12 mx-auto flex ">
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
                 <div class="  font-jost fonts1 c2 water text-center md:text-left target1"
-                  :class="`${showElement ? 'visible' : 'hidden'}`">Hello I'm</div>
+                  :class="`${showElement ? 'visible' : 'hidden'}`" >Hello I'm</div>
                 <div class="font-jost fonts2 font-bold c1 text-center md:text-left target2"
                   :class="`${showElement ? 'visible' : 'hidden'}`">Tony Jemba</div>
                 <div class="font-jost fonts3 text-center md:text-left target3"
@@ -102,14 +103,14 @@ onMounted(() => {
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
                   <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
-                    <IconVue class="animate-bounce-slow"/>
+                    <IconVue class="animate-bounce-slow cursor-pointer"/>
                     <IconNuxt class="animate-bounce-slow cursor-pointer"/>
                   </div>
                   <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo" >
-                    <IconNode v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in"  />
-                    <IconGraphQL v-else-if="iconStore.interval === 2" class="animate-bounce-slow fade-in"  />
-                    <IconNext v-else-if="iconStore.interval === 3" class="animate-bounce-slow fade-in" />
-                    <IconLaravel v-else="iconStore.interval === 4" class="animate-bounce-slow fade-in"  />
+                    <IconNode v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in cursor-pointer "  />
+                    <IconGraphQL v-else-if="iconStore.interval === 2" class="animate-bounce-slow fade-in cursor-pointer"  />
+                    <IconNext v-else-if="iconStore.interval === 3" class="animate-bounce-slow fade-in cursor-pointer" />
+                    <IconLaravel v-else="iconStore.interval === 4" class="animate-bounce-slow fade-in cursor-pointer"  />
                   </div>
                   
                   <div>
