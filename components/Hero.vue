@@ -9,6 +9,7 @@ import Youtube from '~/assets/youtube.svg'
 import Medium from '~/assets/medium.svg'
 import KUTE from 'kute.js'
 import { ref, onMounted } from 'vue'
+import { useIconInterval } from '~/stores/iconInterval'
 
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
@@ -18,11 +19,11 @@ const colorMode = useColorMode()
 const blobl = ref();
 const blob2 = ref();
 const vuelogo = ref()
-
-
-//animations
-
 const showElement = ref(false)
+
+
+//switching icons
+const iconStore = useIconInterval()
 
 onMounted(() => {
   setTimeout(() => { showElement.value = true }, 100)
@@ -32,7 +33,8 @@ onMounted(() => {
     { path: blob2.value },
     { repeat: 999, duration: 8000, yoyo: true }
   ).start()
-  //vue logo
+
+  //animations
   KUTE.fromTo(vuelogo.value, { translateY: 100 }, { translateX: 125 }).start();
   useScrollReveal('.target1', '30px', 'bottom', 1300, 1000,)
   useScrollReveal('.target2', '30px', 'bottom', 1400, 1000,)
@@ -41,7 +43,9 @@ onMounted(() => {
   useScrollReveal('.target5', '30px', 'bottom', 1700, 1000,)
   useScrollReveal('.target6', '30px', 'right', 1800, 1000,)
 
-
+  //chaging icons on blob
+  iconStore.changeInterval()
+  
 })
 
 
