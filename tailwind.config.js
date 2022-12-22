@@ -23,6 +23,7 @@ module.exports = {
       },
       animation: {
         fadeInImage: "fadeIn .4s ease-in-out",
+        "bounce-slow": "bounce 10s linear infinite",
       },
       keyframes: () => ({
         fadeIn: {

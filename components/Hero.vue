@@ -56,7 +56,7 @@ onMounted(() => {
           <div class="w-full ">
             <div class=" w-11/12 mx-auto flex ">
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
-                <div class="font-jost fonts1 c2 water text-center md:text-left target1"
+                <div class="  font-jost fonts1 c2 water text-center md:text-left target1"
                   :class="`${showElement ? 'visible' : 'hidden'}`">Hello I'm</div>
                 <div class="font-jost fonts2 font-bold c1 text-center md:text-left target2"
                   :class="`${showElement ? 'visible' : 'hidden'}`">Tony Jemba</div>
@@ -97,63 +97,36 @@ onMounted(() => {
               <div v-show="lgAndLarger" class=" relative target6 w-2/4 flex justify-center items-center "
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
-                  <div class=" absolute h-full flex justify-center items-end h-56 w-10 z-10 ml-16" ref="vuelogo">
-                  
-                    <svg class="cursor-pointer" width="35px" height="35px" viewBox="0 -17 256 256" version="1.1"
-                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
-                      <g>
-                        <path d="M204.8,0 L256,0 L128,220.8 L0,0 L50.56,0 L97.92,0 L128,51.2 L157.44,0 L204.8,0 Z" fill="#41B883"></path>
-                        <path d="M0,0 L128,220.8 L256,0 L204.8,0 L128,132.48 L50.56,0 L0,0 Z" fill="#41B883"></path>
-                        <path d="M50.56,0 L128,133.12 L204.8,0 L157.44,0 L128,51.2 L97.92,0 L50.56,0 Z" fill="#35495E">
-                        </path>
-                      </g>
-                    </svg>
+                  <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
+                    <IconVue class="animate-bounce-slow"/>
+                    <IconNuxt class="animate-bounce-slow cursor-pointer"/>
                   </div>
-                  <div class=" absolute h-full flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo">
+                  <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo">
+                    <IconGraphQL class="animate-bounce-slow" />
+                  </div>
+                  
+                  <div>
+                    <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 
-                    <svg class="cursor-pointer" width="35px" height="35px" viewBox="0 -17 256 256" version="1.1"
-                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                      preserveAspectRatio="xMidYMid">
-                      <g>
-                        <path d="M204.8,0 L256,0 L128,220.8 L0,0 L50.56,0 L97.92,0 L128,51.2 L157.44,0 L204.8,0 Z"
-                          fill="#41B883"></path>
-                        <path d="M0,0 L128,220.8 L256,0 L204.8,0 L128,132.48 L50.56,0 L0,0 Z" fill="#41B883"></path>
-                        <path d="M50.56,0 L128,133.12 L204.8,0 L157.44,0 L128,51.2 L97.92,0 L50.56,0 Z" fill="#35495E">
+                      <g transform="translate(395.3409694537647 549.129049274956)">
+                        <path ref="blobl" class="opacity-10"
+                          d="M254.5 -197.9C345.9 -88.4 447.2 18.4 428.1 96C409 173.5 269.6 221.9 162.9 232.7C56.3 243.5 -17.6 216.8 -93.9 184.2C-170.2 151.6 -248.9 113.2 -290.1 36.5C-331.2 -40.1 -334.9 -155.1 -280.3 -256.2C-225.7 -357.3 -112.8 -444.7 -15.6 -432.2C81.6 -419.7 163.1 -307.4 254.5 -197.9"
+                          fill="#8892b0">
+
                         </path>
+
+                      </g>
+                      <g class="cursor-pointer" transform="translate(486.5623892955482 539.9985897735369)">
+                        <path ref="blob2" class="invisible opacity-10"
+                          d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
+                          fill="#8892b0">
+                        </path>
+                      
                       </g>
                     </svg>
+                    
                   </div>
-                 <div>
-                  <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-                  
-                    <g transform="translate(395.3409694537647 549.129049274956)">
-                      <path ref="blobl" class="opacity-10"
-                        d="M254.5 -197.9C345.9 -88.4 447.2 18.4 428.1 96C409 173.5 269.6 221.9 162.9 232.7C56.3 243.5 -17.6 216.8 -93.9 184.2C-170.2 151.6 -248.9 113.2 -290.1 36.5C-331.2 -40.1 -334.9 -155.1 -280.3 -256.2C-225.7 -357.3 -112.8 -444.7 -15.6 -432.2C81.6 -419.7 163.1 -307.4 254.5 -197.9"
-                        fill="#8892b0">
-                  
-                      </path>
-                  
-                    </g>
-                    <g class="cursor-pointer" transform="translate(486.5623892955482 539.9985897735369)">
-                      <path ref="blob2" class="invisible opacity-10"
-                        d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
-                        fill="#8892b0">
-                      </path>
-                  
-                  <g>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M55.7498 27.1551C52.5277 21.615 44.4723 21.6149 41.2502 27.1551L6.13404 87.5346C2.91191 93.0748 6.93956 100 13.3838 100H40.7975C38.0438 97.5934 37.0241 93.4303 39.1079 89.8584L65.7033 44.2694L55.7498 27.1551Z"
-                      fill="#80EEC0" />
-                    <path
-                      d="M78.0002 40.3997C80.6668 35.8668 87.3332 35.8668 89.9998 40.3997L119.061 89.801C121.728 94.3339 118.395 100 113.062 100H54.9383C49.6052 100 46.2719 94.3339 48.9385 89.801L78.0002 40.3997Z"
-                      fill="#00DC82" />
-                  
-                  </g>
-                    </g>
-                  
-                  </svg>
-                 </div>
 
                 </div>
               </div>
@@ -286,4 +259,6 @@ onMounted(() => {
   font-size: 1em;
   font-weight: 100;
 }
+
+
 </style>
