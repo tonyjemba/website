@@ -106,7 +106,10 @@ onMounted(() => {
                     <IconNuxt class="animate-bounce-slow cursor-pointer"/>
                   </div>
                   <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo">
-                    <IconGraphQL class="animate-bounce-slow" />
+                    <IconGraphQL v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in" />
+                    <IconNode v-if="iconStore.interval === 2" class="animate-bounce-slow fade-in" />
+                    <IconNext v-if="iconStore.interval === 3" class="animate-bounce-slow fade-in"/>
+                    <IconLaravel v-if="iconStore.interval === 4" class="animate-bounce-slow fade-in" />
                   </div>
                   
                   <div>
@@ -264,5 +267,18 @@ onMounted(() => {
   font-weight: 100;
 }
 
+.fade-in {
+  animation: fadeIn 3s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 </style>
