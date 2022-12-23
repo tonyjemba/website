@@ -67,7 +67,7 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div class="w-full z-30   absolute " :class="scrollStore.fromTop > 10 ?'move-up shadow-xl icy':''">
+  <div class="w-full z-30   absolute " :class="scrollStore.scrollUp && scrollStore.fromTop > 50 ? 'sticky top-0 shadow-2xl icy' :''" >
     <div class="w-11/12 flex justify-between  mx-auto  pt-8 pb-4 ">
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />
@@ -131,6 +131,10 @@ onMounted(()=>{
 .move-up {
   transform: translateY(-5rem);
   transition-duration: 1s;
+}
+.move-down{
+  transform: translateY(5rem);
+    transition-duration: 1s;
 }
 .textLcolor {
   color: black;
