@@ -8,7 +8,6 @@ import Logodark from '~/assets/logo-dark.svg'
 import LightIcon from '~/assets/sun.svg'
 import DarkIcon from '~/assets/moon.svg'
 import { useDrawerStore } from '~~/stores/drawer'
-import { useScrollStore } from '~~/stores/scroll'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const mdAndLarger = breakpoints.greaterOrEqual('md')
@@ -26,24 +25,7 @@ onClickOutside(target, () => store.isOpen = false)
 //animations
 const showElem = ref(false)
 
-//scroll detection
-const scrollStore= useScrollStore()
-let lastScrollTop = scrollStore.fromTop
-const handleScroll=()=> {
-  //  check scroll up or down
-  let st = window.pageYOffset || document.documentElement.scrollTop
-  if (st > lastScrollTop) {
-    // downscroll 
-    scrollStore.scrollUp = false
-  } else {
-    // upscroll 
-    scrollStore.scrollUp = true
-  }
-  lastScrollTop = st <= 0 ? 0 : st;
 
-  //distance from top
-  scrollStore.fromTop = window.scrollY
-}
 
 
 onMounted(()=>{
@@ -59,7 +41,9 @@ onMounted(()=>{
   useScrollReveal('.navMenu5', '30px', 'top', 700, 500, )
   useScrollReveal('.navMenu6', '30px', 'top', 800, 500, )
   useScrollReveal('.navMenu7', '30px', 'top', 1000, 500, )
-  window.addEventListener('scroll', handleScroll)
+  //
+  useScrollReveal('.nav', '500px', 'bottom', 1000, 500,)
+
 
 
 })
@@ -67,7 +51,7 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div class="w-full z-30   absolute " :class="scrollStore.scrollUp && scrollStore.fromTop > 50 ? 'sticky top-0 shadow-2xl icy' :''" >
+  <div class="w-full z-10   absolute " >
     <div class="w-11/12 flex justify-between  mx-auto  pt-8 pb-4 ">
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />
@@ -116,18 +100,6 @@ onMounted(()=>{
 </template>
 
 <style scoped>
-.dark-mode .icy {
-  background: linear-gradient(135deg, rgba(6, 20, 40, 0.1), rgba(6, 20, 40, 0));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.light-mode .icy {
-  background: linear-gradient(135deg, rgba(246, 245, 241, 0.1), rgba(246, 245, 241, 0));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
 .move-up {
   transform: translateY(-5rem);
   transition-duration: 1s;
@@ -175,4 +147,5 @@ onMounted(()=>{
   fill: #00FFE1;
   transition: color .3s ease-in-out;
 }
+
 </style>

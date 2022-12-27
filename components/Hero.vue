@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints} from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import Landscapedark from '~/assets/land5.svg'
 import Landscapelight from '~/assets/landlight3.svg'
 import Github from '~/assets/github.svg'
@@ -12,6 +12,7 @@ import { ref, onMounted } from 'vue'
 import { useIconInterval } from '~/stores/iconInterval'
 
 
+
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndLarger = breakpoints.greaterOrEqual('lg')
 
@@ -20,6 +21,7 @@ const blobl = ref();
 const blob2 = ref();
 const vuelogo = ref()
 const showElement = ref(false)
+
 
 
 
@@ -46,23 +48,29 @@ onMounted(() => {
 
   //chaging icons on blob
   iconStore.changeInterval()
-  
+
+
+
+
 })
 
 
 </script>
 
 <template>
+  <!-- :class="scrollStore.scrollUp && scrollStore.fromTop > 0 ? 'fadeIn sticky top-0 shadow-2xl icy' :''" -->
   <div>
+
     <div class="w-full h-screen bg-cover bg-no-repeat bg-center "
       :class="`${colorMode.value === 'light' ? 'bgLight' : 'bgDark'}`">
-      <div class="w-full h-screen  flex flex-col justify-end">
-        <div class="w-full h-screen     absolute flex items-center">
-          <div class="w-full ">
-            <div class=" w-11/12 mx-auto flex ">
+      <div class="w-full h-screen  flex flex-col justify-end ">
+       
+        <div class="w-full h-screen  absolute flex items-center">
+          <div class="w-full  ">
+            <div class=" w-11/12 mx-auto flex mt-22 ">
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
                 <div class="  font-jost fonts1 c2 water text-center md:text-left target1"
-                  :class="`${showElement ? 'visible' : 'hidden'}`" >Hello I'm</div>
+                  :class="`${showElement ? 'visible' : 'hidden'}`">Hello I'm</div>
                 <div class="font-jost fonts2 font-bold c1 text-center md:text-left target2"
                   :class="`${showElement ? 'visible' : 'hidden'}`">Tony Jemba</div>
                 <div class="font-jost fonts3 text-center md:text-left target3"
@@ -103,16 +111,17 @@ onMounted(() => {
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
                   <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
-                    <IconVue class="animate-bounce-slow cursor-pointer"/>
-                    <IconNuxt class="animate-bounce-slow cursor-pointer"/>
+                    <IconVue class="animate-bounce-slow cursor-pointer" />
+                    <IconNuxt class="animate-bounce-slow cursor-pointer" />
                   </div>
-                  <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo" >
-                    <IconNode v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in cursor-pointer "  />
-                    <IconGraphQL v-else-if="iconStore.interval === 2" class="animate-bounce-slow fade-in cursor-pointer"  />
+                  <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo">
+                    <IconNode v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in cursor-pointer " />
+                    <IconGraphQL v-else-if="iconStore.interval === 2"
+                      class="animate-bounce-slow fade-in cursor-pointer" />
                     <IconNext v-else-if="iconStore.interval === 3" class="animate-bounce-slow fade-in cursor-pointer" />
-                    <IconLaravel v-else="iconStore.interval === 4" class="animate-bounce-slow fade-in cursor-pointer"  />
+                    <IconLaravel v-else="iconStore.interval === 4" class="animate-bounce-slow fade-in cursor-pointer" />
                   </div>
-                  
+
                   <div>
                     <svg id="visual" viewBox="0 0 900 900" width="350" height="340" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
@@ -130,10 +139,10 @@ onMounted(() => {
                           d="M280.1 -260.3C335.5 -153.9 334 -39 293 37.5C252.1 113.9 171.8 152 88.2 197.9C4.6 243.8 -82.3 297.6 -172.6 283.1C-262.9 268.5 -356.7 185.7 -385.8 81.4C-414.9 -22.9 -379.5 -148.6 -304.4 -259.5C-229.3 -370.4 -114.7 -466.4 -1.2 -465.5C112.3 -464.6 224.6 -366.6 280.1 -260.3"
                           fill="#8892b0">
                         </path>
-                      
+
                       </g>
                     </svg>
-                    
+
                   </div>
 
                 </div>

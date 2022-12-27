@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { onBeforeMount, onMounted} from 'vue'
+import { onBeforeMount, onMounted } from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { useScrollStore } from '~~/stores/scroll'
+
 
 const colorMode = useColorMode()
 onBeforeMount(() => {
@@ -9,28 +11,55 @@ onBeforeMount(() => {
   colorMode.value = 'dark'
 })
 
+//showing nav on scroll
+const scrollStore = useScrollStore()
+let lastScrollTop = scrollStore.fromTop
+const handleScroll = () => {
+  //  check scroll up or down
+  let st = window.pageYOffset || document.documentElement.scrollTop
+  if (st > lastScrollTop) {
+    // downscroll 
+    scrollStore.scrollUp = false
+  } else {
+    // upscroll 
+    scrollStore.scrollUp = true
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+
+  //distance from top
+  scrollStore.fromTop = window.scrollY
+}
+
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
+
+  //handle nav on scroll
+  window.addEventListener('scroll', handleScroll)
 })
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
 
-
-
 </script>
 
 <template>
   <!-- <div class="bg-red-500" v-if="loading">Loading</div> -->
-  <div  class="$dark-mode relative">
+
+  <div class="$dark-mode relative">
     <!-- Drawer Overlay -->
     <div class="fixed top-0 z-20 " v-show="drawerStore.isOpen && smallerThanMd">
       <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>
     </div>
-    <Navigation />
-    <Hero />
-    <div>
+
+    <div class="relative ">
+      <!-- showing nav on scroll up -->
+      <div class="absolute z-50 w-full" :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'sticky top-0  fadeIn ':''">
+        <Navigation :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'icy2 shadow-lg':''"/>
+      </div>
+      <!-- nav hides on scroll -->
+      <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible ' " />
+      <Hero />
       <AboutMe />
       <ProjectSection />
       <ContactSection />
@@ -73,5 +102,29 @@ body {
   background: linear-gradient(135deg, rgba(246, 245, 241, 0.1), rgba(246, 245, 241, 0));
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
+}
+.fadeIn {
+  animation: fadeIn 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.icy2 {
+  background-color: #06142858;
+ 
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px); */
+}
+
+.light-mode .icy2 {
+ background-color: #f6f7f847;
 }
 </style>
