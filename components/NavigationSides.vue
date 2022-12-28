@@ -43,8 +43,28 @@ import Medium from '~/assets/medium.svg'
     height: 15vh;
     background-color: #ccd6f6;
 }
+.light-mode .line{
+    background-color: #323231;
+}
 .email{
     writing-mode: vertical-rl;
         text-orientation: mixed;
+}
+.dark-mode .iconModeColor {
+    fill: #8892B0
+}
+
+.dark-mode .iconModeColor:hover {
+    fill: #00FFE1;
+    transition: color .3s ease-in-out;
+}
+.iconColor {
+    fill: #323231;
+    transition: color .3s ease-in-out;
+}
+
+.iconColor:hover {
+    fill: #00FFE1;
+    transition: color .3s ease-in-out;
 }
 </style>
