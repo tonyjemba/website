@@ -1,3 +1,5 @@
+app.vue
+
 <script setup lang="ts">
 import { onBeforeMount, onMounted } from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
@@ -26,26 +28,25 @@ const handleScroll = () => {
   }
   lastScrollTop = st <= 0 ? 0 : st;
 
-   //distance from top
-   scrollStore.fromTop = window.scrollY
- }
+  //distance from top
+  scrollStore.fromTop = window.scrollY
+}
 
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
 
   //handle nav on scroll
-   window.addEventListener('scroll', handleScroll)
+  window.addEventListener('scroll', handleScroll)
 })
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
-// const lgAndLarger = breakpoints.greaterOrEqual('lg')
+const lgAndLarger = breakpoints.greaterOrEqual('lg')
 
 </script>
 
 <template>
-  <!-- <div class="bg-red-500" v-if="loading">Loading</div> -->
 
   <div class="$dark-mode relative flex flex-col   ">
     <!-- Drawer Overlay -->
@@ -53,7 +54,7 @@ const smallerThanMd = breakpoints.smaller('md')
       <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>
     </div>
 
-    <div class="relative">
+    <div class="relative ">
       <!-- showing nav on scroll up -->
       <div class="absolute z-50 w-full"
         :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''">
@@ -63,23 +64,27 @@ const smallerThanMd = breakpoints.smaller('md')
       <!-- nav hides on scroll -->
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
-      <!-- <div :class="lgAndLarger ? ' w-10/12 mx-auto z-20 relative bg-transparent ':''"> -->
-        <AboutMe />
-        <ProjectSection />
-        <ContactSection />
-       
-      <!-- </div> -->
-      <!-- <NavigationSides class="bg-transparent" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" /> -->
+      <div class="w-full flex justify-center">
+        <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto " >
+          <AboutMe />
+          <ProjectSection />
+          <ContactSection />
+          <footer>
+            <TheFooter />
+          </footer>
+        </div>
+      </div>
+      <NavigationSides class="" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'"
+        v-if="lgAndLarger && scrollStore.fromTop > 500" />
     </div>
-<footer>
-  <TheFooter />
-</footer>
-   
+
+
   </div>
-    
+
 </template>
 
 <style>
+
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
@@ -151,8 +156,5 @@ body {
 
 .light-mode .icy2 {
   background: #f6f7f864;
-  /* background: linear-gradient(135deg, rgba(246, 245, 241, 0.1), rgba(246, 245, 241, 0));
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);*/
 }
 </style>

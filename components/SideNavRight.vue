@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-between gap-y-10 bg-yellow-500  w-6 ">
+    <div class="flex flex-col justify-between gap-y-10 bg-yellow-500  w-6">
         <div class="email ">jjembatony@gmail.com</div>
         <div class=" flex justify-center pt-4">
             <div class="line"></div>
