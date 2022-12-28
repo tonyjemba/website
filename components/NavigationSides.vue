@@ -29,7 +29,7 @@ import Medium from '~/assets/medium.svg'
                 </div>
             </div>
             <div class="flex flex-col justify-between  " >
-                <div class="email ">jjembatony@gmail.com</div>
+                <div class="email font-jost tracking-wider textLcolor cursor-pointer ">jjembatony@gmail.com</div>
                 <div class=" flex justify-center">
                     <div class="line"></div>
                 </div>
@@ -66,5 +66,19 @@ import Medium from '~/assets/medium.svg'
 .iconColor:hover {
     fill: #00FFE1;
     transition: color .3s ease-in-out;
+}
+.dark-mode .textLcolor {
+    transition: color .3s ease-in-out;
+    color: #8892B0;
+}
+
+.light-mode .textLcolor {
+    transition: color .3s ease-in-out;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.textLcolor:hover {
+    transition: color .3s ease-in-out;
+    color: #00FFE1;
 }
 </style>
