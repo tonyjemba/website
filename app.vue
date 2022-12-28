@@ -55,7 +55,7 @@ const smallerThanMd = breakpoints.smaller('md')
     <div class="relative ">
       <!-- showing nav on scroll up -->
       <div class="absolute z-50 w-full" :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'sticky top-0  fadeIn ':''">
-        <Navigation :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'icy2 shadow-lg':''"/>
+        <Navigation :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'backdrop-blur-sm icy2 shadow-2xl ':''"/>
       </div>
       <!-- nav hides on scroll -->
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible ' " />
@@ -118,13 +118,15 @@ body {
   }
 }
 .icy2 {
-  background-color: #06142858;
+  background-color: #06142885;
  
-  /* backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px); */
+
 }
 
 .light-mode .icy2 {
- background-color: #f6f7f847;
+  background: #f6f7f864;
+  /* background: linear-gradient(135deg, rgba(246, 245, 241, 0.1), rgba(246, 245, 241, 0));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);*/
 }
 </style>

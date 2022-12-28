@@ -112,12 +112,17 @@ onMounted(()=>{
   color: black;
   transition: color .3s ease-in-out;
 }
+.light-mode .textLcolor:hover {
+  color: #00FFE1;
+  transition: color .3s ease-in-out;
+}
 
 .textL2color:hover {
   color: #00FFE1;
   background-color: #00ffe11a;
   transition: color .3s ease-in-out;
 }
+
 
 .iconColor {
   fill: black;
@@ -147,5 +152,4 @@ onMounted(()=>{
   fill: #00FFE1;
   transition: color .3s ease-in-out;
 }
-
 </style>
