@@ -63,7 +63,7 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
       <!-- nav hides on scroll -->
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
-      <div :class="lgAndLarger? ' w-10/12 mx-auto z-20 relative':''">
+      <div :class="lgAndLarger ? ' w-10/12 mx-auto z-20 relative bg-transparent ':''">
         <AboutMe />
         <ProjectSection />
         <ContactSection />
@@ -71,7 +71,7 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
           <TheFooter />
         </footer>
       </div>
-      <NavigationSides :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" />
+      <NavigationSides class="bg-transparent" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" />
     </div>
 
    
