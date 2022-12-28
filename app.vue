@@ -71,7 +71,7 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
           <TheFooter />
         </footer>
       </div>
-      <NavigationSides class="" v-if="lgAndLarger" />
+      <NavigationSides :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" />
     </div>
 
    
@@ -80,7 +80,6 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
 </template>
 
 <style>
-
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
@@ -126,6 +125,21 @@ body {
 
   to {
     opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 
