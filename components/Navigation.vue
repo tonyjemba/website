@@ -51,7 +51,7 @@ onMounted(()=>{
 </script>
 
 <template>
-  <div class="w-full z-10   absolute " >
+  <div class="w-full z-10   absolute bg" >
     <div class="w-11/12 flex justify-between  mx-auto  pt-8 pb-4 ">
       <div v-show="colorMode.value === 'light'" class=" flex items-center  cursor-pointer">
         <LogoLight />

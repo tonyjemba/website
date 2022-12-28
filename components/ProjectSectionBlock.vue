@@ -13,7 +13,7 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
 
 <template>
   <div>
-    <div v-show="mdAndLarger" class="w-11/12 flex  justify-center mx-auto">
+    <div v-show="mdAndLarger" class="w-11/12 lg:w-full flex  justify-center mx-auto">
       <div class="w-10/12 mb-24 items-center flex  relative " :class="props.alter ? 'flex-row' : 'flex-row-reverse'">
         <div class="fallbackcolor w-6/12 md:h-72 lg:h-96  rounded bgImage shadow-md cursor-pointer ">
           <div class="w-full h-full overlaycolor  rounded" />

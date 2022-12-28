@@ -13,7 +13,7 @@ onMounted(() => {
   <div class="w-full mt-32 md:mt-56 mb-44 md:mb-64">
     <TheTitle class="about" heading="About Me" underline-class="justify-start" />
 
-    <div class=" about w-11/12  flex justify-center mx-auto about2">
+    <div class=" about w-11/12 lg:w-full   flex justify-center mx-auto about2">
       <div class=" sm:w-10/12 flex flex-col space-y-20 md:space-y-0 md:flex-row  justify-center mx-auto">
         <div class="w-full md:grow font-gsans">
           <div class=" space-y-6">

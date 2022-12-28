@@ -40,37 +40,47 @@ onMounted(() => {
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
+const lgAndLarger = breakpoints.greaterOrEqual('lg')
 
 </script>
 
 <template>
   <!-- <div class="bg-red-500" v-if="loading">Loading</div> -->
 
-  <div class="$dark-mode relative">
+  <div class="$dark-mode relative flex flex-col   ">
     <!-- Drawer Overlay -->
     <div class="fixed top-0 z-20 " v-show="drawerStore.isOpen && smallerThanMd">
       <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>
     </div>
 
-    <div class="relative ">
+    <div class="relative">
       <!-- showing nav on scroll up -->
-      <div class="absolute z-50 w-full" :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'sticky top-0  fadeIn ':''">
-        <Navigation :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ?'backdrop-blur-sm icy2 shadow-2xl ':''"/>
+      <div class="absolute z-50 w-full"
+        :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''">
+        <Navigation
+          :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'backdrop-blur-sm icy2 shadow-2xl ' : ''" />
       </div>
       <!-- nav hides on scroll -->
-      <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible ' " />
+      <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
-      <AboutMe />
-      <ProjectSection />
-      <ContactSection />
+      <div :class="lgAndLarger? ' w-10/12 mx-auto z-20 relative':''">
+        <AboutMe />
+        <ProjectSection />
+        <ContactSection />
+        <footer>
+          <TheFooter />
+        </footer>
+      </div>
+      <NavigationSides class="" v-if="lgAndLarger" />
     </div>
-    <footer>
-      <TheFooter />
-    </footer>
+
+   
   </div>
+    
 </template>
 
 <style>
+
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
@@ -103,6 +113,7 @@ body {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
 }
+
 .fadeIn {
   animation: fadeIn 1s;
   animation-fill-mode: forwards;
@@ -117,9 +128,10 @@ body {
     opacity: 1;
   }
 }
+
 .icy2 {
   background-color: #06142885;
- 
+
 
 }
 
