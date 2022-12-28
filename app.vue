@@ -26,21 +26,21 @@ const handleScroll = () => {
   }
   lastScrollTop = st <= 0 ? 0 : st;
 
-  //distance from top
-  scrollStore.fromTop = window.scrollY
-}
+   //distance from top
+   scrollStore.fromTop = window.scrollY
+ }
 
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
 
   //handle nav on scroll
-  window.addEventListener('scroll', handleScroll)
+   window.addEventListener('scroll', handleScroll)
 })
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
-const lgAndLarger = breakpoints.greaterOrEqual('lg')
+// const lgAndLarger = breakpoints.greaterOrEqual('lg')
 
 </script>
 
@@ -63,17 +63,17 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
       <!-- nav hides on scroll -->
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
-      <div :class="lgAndLarger ? ' w-10/12 mx-auto z-20 relative bg-transparent ':''">
+      <!-- <div :class="lgAndLarger ? ' w-10/12 mx-auto z-20 relative bg-transparent ':''"> -->
         <AboutMe />
         <ProjectSection />
         <ContactSection />
-        <footer>
-          <TheFooter />
-        </footer>
-      </div>
-      <NavigationSides class="bg-transparent" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" />
+       
+      <!-- </div> -->
+      <!-- <NavigationSides class="bg-transparent" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'" v-if="lgAndLarger" /> -->
     </div>
-
+<footer>
+  <TheFooter />
+</footer>
    
   </div>
     
