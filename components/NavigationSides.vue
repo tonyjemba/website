@@ -30,7 +30,8 @@ import Medium from '~/assets/medium.svg'
                 </div>
             </div>
             <div class="flex flex-col justify-between  ">
-                <div class="email font-jost tracking-wider textLcolor cursor-pointer ">jjembatony@gmail.com</div>
+                <NuxtLink to="mailto:jjembatony@gmail.com"
+                    class="email font-jost tracking-wider textLcolor cursor-pointer ">jjembatony@gmail.com</NuxtLink>
                 <div class=" flex justify-center">
                     <div class="line"></div>
                 </div>
