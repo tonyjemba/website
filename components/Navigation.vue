@@ -17,16 +17,12 @@ let { isOpen } = storeToRefs(useDrawerStore())
 
 const colorMode = useColorMode()
 const store = useDrawerStore()
-
-const target = ref(null)
-//click outside drawer to close it
-onClickOutside(target, () => store.isOpen = false)
-
 //animations
 const showElem = ref(false)
+const closeTarget = ref(null)
 
-
-
+//click outside drawer to close it
+onClickOutside(closeTarget, () => store.isOpen = false)
 
 onMounted(()=>{
   setTimeout(() => { showElem.value = true }, 100)
@@ -90,9 +86,9 @@ onMounted(()=>{
           </div>
         </div>
         <!-- below medium screens -->
-        <div ref="target" v-show="smallerThanMd" class="flex justify-end z-50  ">
-          <NavigationDrawerIcon  :status="store.changeStatus" />
-          <NavigationDrawer  :is-open="isOpen" />
+        <div  v-show="smallerThanMd" class="flex justify-end z-50  ">
+          <NavigationDrawerIcon  :status="store.changeStatus"  />
+          <NavigationDrawer ref="closeTarget"  :is-open="isOpen"   />
         </div>
       </div>
     </div>
