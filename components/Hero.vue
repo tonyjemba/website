@@ -13,7 +13,6 @@ import { useIconInterval } from '~/stores/iconInterval'
 import { useScrollStore } from '~/stores/scroll'
 
 
-
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndLarger = breakpoints.greaterOrEqual('lg')
 const colorMode = useColorMode()
@@ -29,8 +28,8 @@ const icons = ref(null)
 const iconsVisible = useElementVisibility(icons)
 
 //whatching iconvisibility value and updating state in pinia store
-watch(iconsVisible,(newVal)=>{
-scrollStore.iconsInHeroVisible = newVal
+watch(iconsVisible, (newVal) => {
+  scrollStore.iconsInHeroVisible = newVal
 })
 
 //activating animations on component mount
@@ -155,7 +154,7 @@ onMounted(() => {
             <Landscapelight class="w-full  " />
           </div>
           <div v-show="colorMode.value === 'dark'">
-            <Landscapedark class="w-full   " />
+            ss="w-full " />
           </div>
         </div>
       </div>
