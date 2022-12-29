@@ -57,7 +57,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="home" >
+  <div id="home">
     <div class="w-full h-screen bg-cover bg-no-repeat bg-center "
       :class="`${colorMode.value === 'light' ? 'bgLight' : 'bgDark'}`">
       <div class="w-full h-screen  flex flex-col justify-end ">
@@ -79,26 +79,37 @@ onMounted(() => {
                   passionate and dedicated to my work.</div>
                 <div class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10  sm:gap-x-14  "
                   :class="`${showElement ? 'visible' : 'hidden'}`">
-                  <div class=" cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan  ">
+                  <NuxtLink to="mailto:jjembatony@gmail.com"
+                    class=" cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan  ">
                     <div class="text-center pt-2 pb-2 pl-5 pr-5 ">
-                      <NuxtLink class="textLcolor font-jost" to="mailto:jjembatony@gmail.com">Hire Me</NuxtLink>
+                      <div class="textLcolor font-jost">Hire Me</div>
                     </div>
-                  </div>
+                  </NuxtLink>
                   <div class="flex justify-center gap-x-5 items-center" ref="icons">
                     <div>
-                      <Github class="cursor-pointer iconColor iconModeColor" />
+                      <NuxtLink to="https://github.com/tonyjemba">
+                        <Github class="cursor-pointer iconColor iconModeColor" />
+                      </NuxtLink>
                     </div>
                     <div>
-                      <LinkedIn class="cursor-pointer iconColor iconModeColor" />
+                      <NuxtLink to="https://www.linkedin.com/in/tonyjemba/">
+                        <LinkedIn class="cursor-pointer iconColor iconModeColor" />
+                      </NuxtLink>
                     </div>
                     <div>
-                      <Twitter class="cursor-pointer iconColor iconModeColor" />
+                      <NuxtLink to="https://twitter.com/TonyJemba">
+                        <Twitter class="cursor-pointer iconColor iconModeColor" />
+                      </NuxtLink>
                     </div>
                     <div>
-                      <Youtube class="cursor-pointer iconColor iconModeColor" />
+                      <NuxtLink to="https://www.youtube.com/@tonyjemba">
+                        <Youtube class="cursor-pointer iconColor iconModeColor" />
+                      </NuxtLink>
                     </div>
                     <div>
-                      <Medium class="cursor-pointer iconColor iconModeColor" />
+                      <NuxtLink to="https://medium.com/@tonyjemba">
+                        <Medium class="cursor-pointer iconColor iconModeColor" />
+                      </NuxtLink>
                     </div>
 
                   </div>
@@ -108,8 +119,12 @@ onMounted(() => {
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
                   <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
-                    <IconVue class="animate-bounce-slow cursor-pointer" />
-                    <IconNuxt class="animate-bounce-slow cursor-pointer" />
+                    <NuxtLink to="https://vuejs.org/">
+                      <IconVue class="animate-bounce-slow cursor-pointer" />
+                    </NuxtLink>
+                    <NuxtLink to="https://nuxt.com/">
+                      <IconNuxt class="animate-bounce-slow cursor-pointer" />
+                    </NuxtLink>
                   </div>
                   <div class=" absolute  flex justify-center items-center h-40 w-10 z-10 " ref="vuelogo">
                     <IconNode v-if="iconStore.interval === 1" class="animate-bounce-slow fade-in cursor-pointer " />

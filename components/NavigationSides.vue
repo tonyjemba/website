@@ -10,21 +10,21 @@ import Medium from '~/assets/medium.svg'
     <div class=" fixed bottom-0 w-full ">
         <div class="w-11/12 flex justify-between  mx-auto flex flex-row justify-between">
             <div class="flex flex-col gap-y-6">
-                <div>
+                <NuxtLink to="https://github.com/tonyjemba">
                     <Github class="cursor-pointer iconColor iconModeColor" />
-                </div>
-                <div>
+                </NuxtLink>
+                <NuxtLink to="https://www.linkedin.com/in/tonyjemba/">
                     <LinkedIn class="cursor-pointer iconColor iconModeColor" />
-                </div>
-                <div>
+                </NuxtLink>
+                <NuxtLink to="https://twitter.com/TonyJemba">
                     <Twitter class="cursor-pointer iconColor iconModeColor" />
-                </div>
-                <div>
+                </NuxtLink>
+                <NuxtLink to="https://www.youtube.com/@tonyjemba">
                     <Youtube class="cursor-pointer iconColor iconModeColor" />
-                </div>
-                <div>
+                </NuxtLink>
+                <NuxtLink to="https://medium.com/@tonyjemba">
                     <Medium class="cursor-pointer iconColor iconModeColor" />
-                </div>
+                </NuxtLink>
                 <div class=" flex justify-center">
                     <div class="line"></div>
                 </div>
