@@ -1,8 +1,9 @@
 
 export const useScrollReveal = (target:string,distance:string,origin:string,delay:number,duration:number):void => {
-    const nuxtApp = useNuxtApp()
+  
+  const nuxtApp = useNuxtApp()
    
-      nuxtApp.$ScrollReveal().reveal(target, {
+  nuxtApp.$ScrollReveal().reveal(target, {
     distance,
     origin,
     delay,

@@ -8,14 +8,20 @@ import { useScrollStore } from '~~/stores/scroll'
 
 
 const colorMode = useColorMode()
+//breakpoints
+const drawerStore = useDrawerStore()
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const smallerThanMd = breakpoints.smaller('md')
+const lgAndLarger = breakpoints.greaterOrEqual('lg')
+//showing nav on scroll
+const scrollStore = useScrollStore()
+let lastScrollTop = scrollStore.fromTop
+
 onBeforeMount(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
 })
 
-//showing nav on scroll
-const scrollStore = useScrollStore()
-let lastScrollTop = scrollStore.fromTop
 const handleScroll = () => {
   //  check scroll up or down
   let st = window.pageYOffset || document.documentElement.scrollTop
@@ -27,7 +33,6 @@ const handleScroll = () => {
     scrollStore.scrollUp = true
   }
   lastScrollTop = st <= 0 ? 0 : st;
-
   //distance from top
   scrollStore.fromTop = window.scrollY
 }
@@ -35,15 +40,9 @@ const handleScroll = () => {
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
-
   //handle nav on scroll
   window.addEventListener('scroll', handleScroll)
 })
-const drawerStore = useDrawerStore()
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const smallerThanMd = breakpoints.smaller('md')
-const lgAndLarger = breakpoints.greaterOrEqual('lg')
-
 </script>
 
 <template>
@@ -65,7 +64,7 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
       <div class="w-full flex justify-center">
-        <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto " >
+        <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto ">
           <AboutMe />
           <ProjectSection />
           <ContactSection />
@@ -84,7 +83,6 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
 </template>
 
 <style>
-
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
