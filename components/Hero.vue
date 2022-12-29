@@ -154,7 +154,7 @@ onMounted(() => {
             <Landscapelight class="w-full  " />
           </div>
           <div v-show="colorMode.value === 'dark'">
-            ss="w-full " />
+            <Landscapedark class="w-full   " />
           </div>
         </div>
       </div>
