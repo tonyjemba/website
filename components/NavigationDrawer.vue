@@ -30,7 +30,7 @@ const store = useDrawerStore()
       <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#myProjects">
         Projects
       </a>
-      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="https://medium.com/@tonyjemba" target="_blank">
         Blog
       </a>
       <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#contactMe">
