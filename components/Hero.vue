@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { breakpointsTailwind, useBreakpoints, useElementVisibility } from '@vueuse/core'
 import Landscapedark from '~/assets/land5.svg'
 import Landscapelight from '~/assets/landlight3.svg'
 import Github from '~/assets/github.svg'
@@ -10,24 +10,30 @@ import Medium from '~/assets/medium.svg'
 import KUTE from 'kute.js'
 import { ref, onMounted } from 'vue'
 import { useIconInterval } from '~/stores/iconInterval'
+import { useScrollStore } from '~/stores/scroll'
 
 
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndLarger = breakpoints.greaterOrEqual('lg')
-
 const colorMode = useColorMode()
 const blobl = ref();
 const blob2 = ref();
 const vuelogo = ref()
 const showElement = ref(false)
-
-
-
-
-//switching icons
+//for switching icons
 const iconStore = useIconInterval()
+//to track whether the social icons are in the viewport
+const scrollStore = useScrollStore()
+const icons = ref(null)
+const iconsVisible = useElementVisibility(icons)
 
+//whatching iconvisibility value and updating state in pinia store
+watch(iconsVisible,(newVal)=>{
+scrollStore.iconsInHeroVisible = newVal
+})
+
+//activating animations on component mount
 onMounted(() => {
   setTimeout(() => { showElement.value = true }, 100)
   KUTE.fromTo(
@@ -48,23 +54,16 @@ onMounted(() => {
 
   //chaging icons on blob
   iconStore.changeInterval()
-
-
-
-
 })
-
-
 </script>
 
 <template>
-  <!-- :class="scrollStore.scrollUp && scrollStore.fromTop > 0 ? 'fadeIn sticky top-0 shadow-2xl icy' :''" -->
   <div>
 
     <div class="w-full h-screen bg-cover bg-no-repeat bg-center "
       :class="`${colorMode.value === 'light' ? 'bgLight' : 'bgDark'}`">
       <div class="w-full h-screen  flex flex-col justify-end ">
-       
+
         <div class="w-full h-screen  absolute flex items-center">
           <div class="w-full  ">
             <div class=" w-11/12 mx-auto flex mt-22 ">
@@ -87,7 +86,7 @@ onMounted(() => {
                       <div class="textLcolor font-jost">Hire Me</div>
                     </div>
                   </div>
-                  <div class="flex justify-center gap-x-5 items-center">
+                  <div class="flex justify-center gap-x-5 items-center" ref="icons">
                     <div>
                       <Github class="cursor-pointer iconColor iconModeColor" />
                     </div>
