@@ -1,10 +1,10 @@
-app.vue
 
 <script setup lang="ts">
 import { onBeforeMount, onMounted } from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { useScrollStore } from '~~/stores/scroll'
+import KUTE from 'kute.js'
 
 
 const colorMode = useColorMode()
@@ -43,6 +43,8 @@ onMounted(() => {
   //handle nav on scroll
   window.addEventListener('scroll', handleScroll)
 })
+
+
 </script>
 
 <template>
@@ -67,7 +69,7 @@ onMounted(() => {
         <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto ">
           <AboutMe />
           <ProjectSection />
-          <ContactSection />
+          <ContactSection  />
           <footer>
             <TheFooter />
           </footer>
@@ -83,6 +85,9 @@ onMounted(() => {
 </template>
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);

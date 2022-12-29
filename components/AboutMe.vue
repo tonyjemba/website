@@ -9,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full mt-32 md:mt-56 mb-44 md:mb-64">
+  <div class="w-full mt-32 md:mt-56 mb-44 md:mb-64" id="aboutMe">
     <TheTitle class="about" heading="About Me" underline-class="justify-start" />
     <div class=" about w-11/12 lg:w-full   flex justify-center mx-auto about2">
       <div class=" sm:w-10/12 flex flex-col space-y-20 md:space-y-0 md:flex-row  justify-center mx-auto">

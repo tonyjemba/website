@@ -52,20 +52,20 @@ onMounted(() => {
       <div class="  flex ">
         <!-- medium and above screens -->
         <div v-show="mdAndLarger" class=" flex  gap-x-8 justify-end items-center font-jost font-medium text-base  ">
-          <a class="cursor-pointer textLcolor navMenu1 " :class="`${showElem ? 'visible' : 'hidden'}`">
+          <a class="cursor-pointer textLcolor navMenu1 " :class="`${showElem ? 'visible' : 'hidden'}`" href="#home">
             Home
           </a>
-          <a class="cursor-pointer textLcolor navMenu2" href="#about" :class="`${showElem ? 'visible' : 'hidden'}`">
+          <a class="cursor-pointer textLcolor navMenu2" href="#aboutMe" :class="`${showElem ? 'visible' : 'hidden'}`">
             About Me
           </a>
-          <a class="cursor-pointer textLcolor navMenu3" href="#projects" :class="`${showElem ? 'visible' : 'hidden'}`">
+          <a class="cursor-pointer textLcolor navMenu3" href="#myProjects" :class="`${showElem ? 'visible' : 'hidden'}`">
             Projects
           </a>
           <a class="cursor-pointer textLcolor navMenu4" :class="`${showElem ? 'visible' : 'hidden'}`"
             href="https://medium.com/@tonyjemba" target="_blank">
             Blog
           </a>
-          <a class="cursor-pointer textLcolor navMenu5" :class="`${showElem ? 'visible' : 'hidden'}`" href="#contact">
+          <a class="cursor-pointer textLcolor navMenu5" :class="`${showElem ? 'visible' : 'hidden'}`" href="#contactMe">
             Contact
           </a>
           <div class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan "

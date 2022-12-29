@@ -57,8 +57,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-
+  <div id="home" >
     <div class="w-full h-screen bg-cover bg-no-repeat bg-center "
       :class="`${colorMode.value === 'light' ? 'bgLight' : 'bgDark'}`">
       <div class="w-full h-screen  flex flex-col justify-end ">

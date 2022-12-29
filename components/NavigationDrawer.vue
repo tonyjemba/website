@@ -21,21 +21,21 @@ const store = useDrawerStore()
         :class="store.drawerStatus ? 'fadeIn' : 'fadeOut'" />
     </div>
     <div class="flex flex-col gap-y-8 w-full h-full justify-center items-center ">
-      <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#home">
         Home
-      </div>
-      <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      </a>
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#aboutMe">
         About Me
-      </div>
-      <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      </a>
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#myProjects">
         Projects
-      </div>
-      <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      </a>
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
         Blog
-      </div>
-      <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
+      </a>
+      <a class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor" href="#contactMe">
         Contact
-      </div>
+      </a>
       <div class="flex gap-x-11 pt-8">
         <div class="cursor-pointer textLcolor border rounded resume-btn ">
           <div class="text-center mt-1 mb-2 mr-3 ml-3 colored">

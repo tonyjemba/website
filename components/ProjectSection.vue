@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class=" mb-32 md:mb-60">
+  <div class=" mb-32 md:mb-60" id="myProjects">
     <TheTitle heading="Some Projects I've Built" underline-class="justify-end " class="project" />
     <ProjectSectionBlock :alter="true" class="project2" />
     <ProjectSectionBlock :alter="false" class=" project3" />

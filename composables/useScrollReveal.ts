@@ -12,4 +12,5 @@ export const useScrollReveal = (target:string,distance:string,origin:string,dela
      cleanup: false,
 
   })
+ 
 }

@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <TheTitle heading="Get In Touch" underline-class="justify-start" class="contact" />
+  <TheTitle heading="Get In Touch" underline-class="justify-start" class="contact" id="contactMe" />
   <div class="text-center contact2 ">
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center ">
       <div>
