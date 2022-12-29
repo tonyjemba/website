@@ -1,14 +1,14 @@
 <template>
-    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="48px"
-        height="48px" fill-rule="nonzero">
+    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0,0,256,256" width="48px" height="48px" fill-rule="nonzero">
         <g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
             font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
         </g>
-        <g fill="#ff4081" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
-            stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
-            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+        <g fill="#ff4081" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
             <g transform="scale(5.33333,5.33333)">
                 <path
                     d="M24.5,45.161l-17.5,-10.341v-20.64l17.5,-10.341l17.5,10.341v20.64zM9,33.68l15.5,9.159l15.5,-9.159v-18.36l-15.5,-9.159l-15.5,9.159z">
