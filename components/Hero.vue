@@ -44,12 +44,12 @@ onMounted(() => {
 
   //animations
   KUTE.fromTo(vuelogo.value, { translateY: 100 }, { translateX: 125 }).start();
-  useScrollReveal('.target1', '30px', 'bottom', 1300, 1000,)
-  useScrollReveal('.target2', '30px', 'bottom', 1400, 1000,)
-  useScrollReveal('.target3', '30px', 'bottom', 1500, 1000,)
-  useScrollReveal('.target4', '30px', 'bottom', 1600, 1000,)
-  useScrollReveal('.target5', '30px', 'bottom', 1700, 1000,)
-  useScrollReveal('.target6', '30px', 'right', 1800, 1000,)
+  useScrollReveal('.target1', '30px', 'bottom', 900, 1000,)
+  useScrollReveal('.target2', '30px', 'bottom', 1100, 1000,)
+  useScrollReveal('.target3', '30px', 'bottom', 1200, 1000,)
+  useScrollReveal('.target4', '30px', 'bottom', 1300, 1000,)
+  useScrollReveal('.target5', '30px', 'bottom', 1400, 1000,)
+  useScrollReveal('.target6', '30px', 'right', 1500, 1000,)
 
   //chaging icons on blob
   iconStore.changeInterval()
