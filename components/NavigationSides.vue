@@ -10,19 +10,19 @@ import Medium from '~/assets/medium.svg'
     <div class=" fixed bottom-0 w-full ">
         <div class="w-11/12 flex justify-between  mx-auto flex flex-row justify-between">
             <div class="flex flex-col gap-y-6">
-                <NuxtLink to="https://github.com/tonyjemba">
+                <NuxtLink  target="_blank" to="https://github.com/tonyjemba">
                     <Github class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink to="https://www.linkedin.com/in/tonyjemba/">
+                <NuxtLink  target="_blank" to="https://www.linkedin.com/in/tonyjemba/">
                     <LinkedIn class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink to="https://twitter.com/TonyJemba">
+                <NuxtLink  target="_blank" to="https://twitter.com/TonyJemba">
                     <Twitter class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink to="https://www.youtube.com/@tonyjemba">
+                <NuxtLink  target="_blank" to="https://www.youtube.com/@tonyjemba">
                     <Youtube class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink to="https://medium.com/@tonyjemba">
+                <NuxtLink  target="_blank" to="https://medium.com/@tonyjemba">
                     <Medium class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
                 <div class=" flex justify-center">
@@ -30,7 +30,7 @@ import Medium from '~/assets/medium.svg'
                 </div>
             </div>
             <div class="flex flex-col justify-between  ">
-                <NuxtLink to="mailto:jjembatony@gmail.com"
+                <NuxtLink   to="mailto:jjembatony@gmail.com"
                     class="email font-jost tracking-wider textLcolor cursor-pointer ">jjembatony@gmail.com</NuxtLink>
                 <div class=" flex justify-center">
                     <div class="line"></div>

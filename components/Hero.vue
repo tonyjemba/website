@@ -87,27 +87,27 @@ onMounted(() => {
                   </NuxtLink>
                   <div class="flex justify-center gap-x-5 items-center" ref="icons">
                     <div>
-                      <NuxtLink to="https://github.com/tonyjemba">
+                      <NuxtLink  target="_blank" to="https://github.com/tonyjemba">
                         <Github class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink to="https://www.linkedin.com/in/tonyjemba/">
+                      <NuxtLink  target="_blank" to="https://www.linkedin.com/in/tonyjemba/">
                         <LinkedIn class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink to="https://twitter.com/TonyJemba">
+                      <NuxtLink  target="_blank" to="https://twitter.com/TonyJemba">
                         <Twitter class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink to="https://www.youtube.com/@tonyjemba">
+                      <NuxtLink  target="_blank" to="https://www.youtube.com/@tonyjemba">
                         <Youtube class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink to="https://medium.com/@tonyjemba">
+                      <NuxtLink  target="_blank" to="https://medium.com/@tonyjemba">
                         <Medium class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
@@ -119,10 +119,10 @@ onMounted(() => {
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
                   <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
-                    <NuxtLink to="https://vuejs.org/">
+                    <NuxtLink  target="_blank" to="https://vuejs.org/">
                       <IconVue class="animate-bounce-slow cursor-pointer" />
                     </NuxtLink>
-                    <NuxtLink to="https://nuxt.com/">
+                    <NuxtLink  target="_blank" to="https://nuxt.com/">
                       <IconNuxt class="animate-bounce-slow cursor-pointer" />
                     </NuxtLink>
                   </div>
