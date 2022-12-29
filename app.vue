@@ -4,7 +4,6 @@ import { onBeforeMount, onMounted } from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
 import { useScrollStore } from '~~/stores/scroll'
-import KUTE from 'kute.js'
 
 
 const colorMode = useColorMode()

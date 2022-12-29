@@ -81,7 +81,7 @@ onMounted(() => {
                   :class="`${showElement ? 'visible' : 'hidden'}`">
                   <div class=" cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan  ">
                     <div class="text-center pt-2 pb-2 pl-5 pr-5 ">
-                      <div class="textLcolor font-jost">Hire Me</div>
+                      <NuxtLink class="textLcolor font-jost" to="mailto:jjembatony@gmail.com">Hire Me</NuxtLink>
                     </div>
                   </div>
                   <div class="flex justify-center gap-x-5 items-center" ref="icons">
