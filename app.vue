@@ -74,7 +74,7 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
           </footer>
         </div>
       </div>
-      <NavigationSides class="" :class="lgAndLarger && scrollStore.fromTop > 500 ? 'fadeIn' :'fadeOut'"
+      <NavigationSides class="" :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' :'fadeOut'"
         v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" />
     </div>
 
