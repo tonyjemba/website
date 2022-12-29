@@ -14,12 +14,13 @@ const store = useDrawerStore()
 </script>
 
 <template>
-  <div  class="fixed bg-red-500 z-30 top-0 right-0 h-screen p-4 overflow-y-hidden drawerbg sm:w-3/5 w-4/5 "
+  <div class="fixed bg-red-500 z-30 top-0 right-0 h-screen p-4 overflow-y-hidden drawerbg sm:w-3/5 w-4/5 "
     :class="props.isOpen ? 'onScreen' : 'offScreen'">
     <div class="w-full  flex justify-start pt-4 ">
-      <NavigationDrawerIcon :status="store.changeStatus" @click="store.changeStatus" :class="store.drawerStatus?'fadeIn':'fadeOut'"/>
+      <NavigationDrawerIcon :status="store.changeStatus" @click="store.changeStatus"
+        :class="store.drawerStatus ? 'fadeIn' : 'fadeOut'" />
     </div>
-    <div  class="flex flex-col gap-y-8 w-full h-full justify-center items-center ">
+    <div class="flex flex-col gap-y-8 w-full h-full justify-center items-center ">
       <div class=" font-jost font-medium cursor-pointer sm:text-2xl text-xl textLcolor">
         Home
       </div>
@@ -119,6 +120,7 @@ const store = useDrawerStore()
 .dark-mode .colored {
   color: #00FFE1;
 }
+
 .fadeIn {
   animation: fadeIn 0.5s;
   animation-fill-mode: forwards;
