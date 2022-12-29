@@ -21,10 +21,12 @@ const props = defineProps<Props>()
 .headingColor {
   color: #ccd6f6;
 }
+
 .light-mode .headingColor {
   color: black;
 }
-.undercolor{
+
+.undercolor {
   background-color: #00FFE1;
 }
 </style>
