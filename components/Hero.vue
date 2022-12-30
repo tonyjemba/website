@@ -87,27 +87,29 @@ onMounted(() => {
                   </NuxtLink>
                   <div class="flex justify-center gap-x-5 items-center" ref="icons">
                     <div>
-                      <NuxtLink  target="_blank" to="https://github.com/tonyjemba">
+                      <NuxtLink target="_blank" to="https://github.com/tonyjemba" aria-label="Github" rel="noopener">
                         <Github class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink  target="_blank" to="https://www.linkedin.com/in/tonyjemba/">
+                      <NuxtLink target="_blank" to="https://www.linkedin.com/in/tonyjemba/" aria-label="LinkedIn"
+                        rel="noopener">
                         <LinkedIn class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink  target="_blank" to="https://twitter.com/TonyJemba">
+                      <NuxtLink target="_blank" to="https://twitter.com/TonyJemba" aria-label="Twitter" rel="noopener">
                         <Twitter class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink  target="_blank" to="https://www.youtube.com/@tonyjemba">
+                      <NuxtLink target="_blank" to="https://www.youtube.com/@tonyjemba" aria-label="Youtube"
+                        rel="noopener">
                         <Youtube class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
                     <div>
-                      <NuxtLink  target="_blank" to="https://medium.com/@tonyjemba">
+                      <NuxtLink target="_blank" to="https://medium.com/@tonyjemba" aria-label="Medium" rel="noopener">
                         <Medium class="cursor-pointer iconColor iconModeColor" />
                       </NuxtLink>
                     </div>
@@ -119,10 +121,10 @@ onMounted(() => {
                 :class="`${showElement ? 'visible' : 'hidden'}`">
                 <div>
                   <div class=" absolute  flex flex-row  justify-between items-end h-64 w-44 z-10 ml-16" ref="vuelogo">
-                    <NuxtLink  target="_blank" to="https://vuejs.org/">
+                    <NuxtLink target="_blank" to="https://vuejs.org/" aria-label="Vue" rel="noopener">
                       <IconVue class="animate-bounce-slow cursor-pointer" />
                     </NuxtLink>
-                    <NuxtLink  target="_blank" to="https://nuxt.com/">
+                    <NuxtLink target="_blank" to="https://nuxt.com/" aria-label="Nuxt" rel="noopener">
                       <IconNuxt class="animate-bounce-slow cursor-pointer" />
                     </NuxtLink>
                   </div>

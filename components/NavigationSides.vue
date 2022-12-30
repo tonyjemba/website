@@ -10,19 +10,20 @@ import Medium from '~/assets/medium.svg'
     <div class=" fixed bottom-0 w-full ">
         <div class="w-11/12 flex justify-between  mx-auto flex flex-row justify-between">
             <div class="flex flex-col gap-y-6">
-                <NuxtLink  target="_blank" to="https://github.com/tonyjemba">
+                <NuxtLink target="_blank" to="https://github.com/tonyjemba" aria-label="Github" rel="noopener">
                     <Github class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink  target="_blank" to="https://www.linkedin.com/in/tonyjemba/">
+                <NuxtLink target="_blank" to="https://www.linkedin.com/in/tonyjemba/" aria-label="LinkedIn"
+                    rel="noopener">
                     <LinkedIn class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink  target="_blank" to="https://twitter.com/TonyJemba">
+                <NuxtLink target="_blank" to="https://twitter.com/TonyJemba" aria-label="Twitter" rel="noopener">
                     <Twitter class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink  target="_blank" to="https://www.youtube.com/@tonyjemba">
+                <NuxtLink target="_blank" to="https://www.youtube.com/@tonyjemba" aria-label="Youtube" rel="noopener">
                     <Youtube class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
-                <NuxtLink  target="_blank" to="https://medium.com/@tonyjemba">
+                <NuxtLink target="_blank" to="https://medium.com/@tonyjemba" aria-label="Medium" rel="noopener">
                     <Medium class="cursor-pointer iconColor iconModeColor" />
                 </NuxtLink>
                 <div class=" flex justify-center">
@@ -30,7 +31,7 @@ import Medium from '~/assets/medium.svg'
                 </div>
             </div>
             <div class="flex flex-col justify-between  ">
-                <NuxtLink   to="mailto:jjembatony@gmail.com"
+                <NuxtLink to="mailto:jjembatony@gmail.com"
                     class="email font-jost tracking-wider textLcolor cursor-pointer ">jjembatony@gmail.com</NuxtLink>
                 <div class=" flex justify-center">
                     <div class="line"></div>

@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: [['@nuxtjs/robots', { UserAgent: '*', Allow:'/' }],'@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt','@vueuse/nuxt',
+  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt','@vueuse/nuxt',
   ['@nuxtjs/google-fonts',{families:{
       'Open+Sans': [400, 500],
       'Jost': [500],
@@ -14,6 +14,9 @@ export default defineNuxtConfig({
       charset: 'utf-16',
       viewport: 'width=500, initial-scale=1',
       title: 'Tony Jemba',
+      htmlAttrs: {
+       lang: 'en'
+      },
       meta: [
         { name: 'Tony Jemba',
         content: 'This is my personal portfolio website',
