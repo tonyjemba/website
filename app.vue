@@ -3,7 +3,7 @@
 import { onBeforeMount, onMounted } from 'vue'
 import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
-//import { useScrollStore } from '~~/stores/scroll'
+import { useScrollStore } from '~~/stores/scroll'
 
 
 const colorMode = useColorMode()
@@ -11,36 +11,36 @@ const colorMode = useColorMode()
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
-//const lgAndLarger = breakpoints.greaterOrEqual('lg')
+const lgAndLarger = breakpoints.greaterOrEqual('lg')
 //showing nav on scroll
-// const scrollStore = useScrollStore()
-// let lastScrollTop = scrollStore.fromTop
+const scrollStore = useScrollStore()
+let lastScrollTop = scrollStore.fromTop
 
 onBeforeMount(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
 })
 
-// const handleScroll = () => {
-//   //  check scroll up or down
-//   let st = window.pageYOffset || document.documentElement.scrollTop
-//   if (st > lastScrollTop) {
-//     // downscroll 
-//     scrollStore.scrollUp = false
-//   } else {
-//     // upscroll 
-//     scrollStore.scrollUp = true
-//   }
-//   lastScrollTop = st <= 0 ? 0 : st;
-//   //distance from top
-//   scrollStore.fromTop = window.scrollY
-// }
+const handleScroll = () => {
+  //  check scroll up or down
+  let st = window.pageYOffset || document.documentElement.scrollTop
+  if (st > lastScrollTop) {
+    // downscroll 
+    scrollStore.scrollUp = false
+  } else {
+    // upscroll 
+    scrollStore.scrollUp = true
+  }
+  lastScrollTop = st <= 0 ? 0 : st;
+  //distance from top
+  scrollStore.fromTop = window.scrollY
+}
 
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
   //handle nav on scroll
- // window.addEventListener('scroll', handleScroll)
+  window.addEventListener('scroll', handleScroll)
 
 })
 
@@ -56,13 +56,13 @@ onMounted(() => {
 
     <div class="relative ">
       <!-- showing nav on scroll up -->
-      <!-- <div class="absolute z-50 w-full"
+      <div class="absolute z-50 w-full"
         :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''">
         <Navigation
           :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'backdrop-blur-sm icy2 shadow-2xl ' : ''" />
-      </div> -->
+      </div>
       <!-- nav hides on scroll -->
-      <!-- <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" /> -->
+      <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
       <Hero />
       <div class="w-full flex justify-center">
         <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto ">
@@ -74,8 +74,8 @@ onMounted(() => {
           </footer>
         </div>
       </div>
-      <!-- <NavigationSides class="" :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' :'fadeOut'"
-        v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" /> -->
+      <NavigationSides class="" :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' :'fadeOut'"
+        v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" />
     </div>
 
 
