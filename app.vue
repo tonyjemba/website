@@ -41,14 +41,17 @@ onMounted(() => {
   colorMode.value = 'dark'
   //handle nav on scroll
   window.addEventListener('scroll', handleScroll)
-})
+  if (window.document.readyState === 'complete') {
+    console.log('loading complete')
+  }
 
+})
 
 </script>
 
 <template>
 
-  <div class="$dark-mode relative flex flex-col   ">
+  <div class="$dark-mode relative flex flex-col">
     <!-- Drawer Overlay -->
     <div class="fixed top-0 z-20 " v-show="drawerStore.isOpen && smallerThanMd">
       <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>
