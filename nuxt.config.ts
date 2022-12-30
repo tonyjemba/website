@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt','@vueuse/nuxt',
+  modules: [['@nuxtjs/robots', { UserAgent: '*', Allow:'/' }],'@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt','@vueuse/nuxt',
   ['@nuxtjs/google-fonts',{families:{
       'Open+Sans': [400, 500],
       'Jost': [500],
@@ -15,7 +15,10 @@ export default defineNuxtConfig({
       viewport: 'width=500, initial-scale=1',
       title: 'Tony Jemba',
       meta: [
-        { name: 'Tony Jemba', content: 'This is my personal portfolio website' }
+        { name: 'Tony Jemba',
+        content: 'This is my personal portfolio website',
+        hid:'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work'
+       }
       ],
     }
   },
