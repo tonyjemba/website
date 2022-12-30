@@ -19,9 +19,20 @@ export default defineNuxtConfig({
       },
       meta: [
         { name: 'description',
-        content: 'This is my personal portfolio website',
-        hid:'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work'
-       }
+        hid: 'description',
+        content: 'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work',
+       },
+       {
+        name:'og: title',
+        hid: 'og: title',
+        content: 'Tony Jemba'
+       },
+       {
+        name:'og: description',
+        hid: 'og: description',
+        content: 'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work'
+       },
+      
       ],
     }
   },
