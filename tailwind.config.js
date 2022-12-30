@@ -22,9 +22,10 @@ module.exports = {
         mycyan: "#00FFE1",
       },
       animation: {
-        fadeInImage: "fadeIn .4s ease-in-out",
+        fadeInImage: "fadeIn .9s ease-in-out",
         "bounce-slow": "bounce 10s linear infinite",
       },
+      
       keyframes: () => ({
         fadeIn: {
           "0%": { opacity: 0 },

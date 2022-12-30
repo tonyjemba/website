@@ -41,9 +41,7 @@ onMounted(() => {
   colorMode.value = 'dark'
   //handle nav on scroll
   window.addEventListener('scroll', handleScroll)
-  if (window.document.readyState === 'complete') {
-    console.log('loading complete')
-  }
+  
 
 })
 

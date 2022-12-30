@@ -9,6 +9,16 @@ export default defineNuxtConfig({
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found
   },
+    app: {
+    head: {
+      charset: 'utf-16',
+      viewport: 'width=500, initial-scale=1',
+      title: 'Tony Jemba',
+      meta: [
+        { name: 'Tony Jemba', content: 'This is my personal portfolio website' }
+      ],
+    }
+  },
   typescript: {
     strict: true,
   },
