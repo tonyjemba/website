@@ -40,10 +40,10 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
             <div>Redux</div>
           </div>
           <div class="flex  gap-x-4 mt-6" :class="props.alter ? ' justify-end' : ' justify-start'">
-            <a href="https://github.com/tonyjemba/Presidential_campaign_App" target="_blank">
+            <a href="https://github.com/tonyjemba/Presidential_campaign_App" target="_blank" aria-label="Github" rel="noopener">
               <GithubLogo class="cursor-pointer iconColor iconModeColor" />
             </a>
-            <a href="https://projectk21-1a365.web.app/" target="_blank">
+            <a href="https://projectk21-1a365.web.app/" target="_blank" aria-label="Demo" rel="noopener">
               <DemoLink class="cursor-pointer iconColor iconModeColor" />
             </a>
           </div>

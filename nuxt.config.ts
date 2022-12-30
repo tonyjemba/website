@@ -18,7 +18,7 @@ export default defineNuxtConfig({
        lang: 'en'
       },
       meta: [
-        { name: 'Tony Jemba',
+        { name: 'description',
         content: 'This is my personal portfolio website',
         hid:'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work'
        }
