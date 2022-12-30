@@ -41,8 +41,11 @@ onMounted(() => {
   colorMode.value = 'dark'
   //handle nav on scroll
   window.addEventListener('scroll', handleScroll)
-  
 
+  //disable logging errors in production
+  if (process.env.NODE_ENV !== "development") {
+    console.log = () => { };
+  }
 })
 
 </script>
