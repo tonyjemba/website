@@ -12,7 +12,7 @@ import { useDrawerStore } from '~~/stores/drawer'
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const mdAndLarger = breakpoints.greaterOrEqual('md')
 const smallerThanMd = breakpoints.smaller('md')
-let { isOpen } = storeToRefs(useDrawerStore())
+const { isOpen } = storeToRefs(useDrawerStore())
 const colorMode = useColorMode()
 const store = useDrawerStore()
 //animations
