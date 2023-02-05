@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted } from 'vue'
 
-//scrollreveal animations
+// scrollreveal animations
 onMounted(() => {
-  useScrollReveal('.contact', '40px', 'bottom', 100, 500,)
-  useScrollReveal('.contact2', '40px', 'bottom', 200, 500,)
+  useScrollReveal('.contact', '40px', 'bottom', 100, 500)
+  useScrollReveal('.contact2', '40px', 'bottom', 200, 500)
 })
-
 </script>
 
 <template>
-  <TheTitle heading="Get In Touch" underline-class="justify-start" class="contact" id="contactMe" />
+  <TheTitle id="contactMe" heading="Get In Touch" underline-class="justify-start" class="contact" />
   <div class="text-center contact2 ">
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center ">
       <div>
@@ -27,7 +26,6 @@ onMounted(() => {
               </div>
             </div>
           </NuxtLink>
-
         </div>
       </div>
     </div>

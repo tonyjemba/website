@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { breakpointsTailwind, onClickOutside, useBreakpoints } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
-import { ref, onMounted } from 'vue'
-import { onClickOutside } from '@vueuse/core'
+import { onMounted, ref } from 'vue'
 import LogoLight from '~/assets/logo-light.svg'
 import Logodark from '~/assets/logo-dark.svg'
 import LightIcon from '~/assets/sun.svg'
@@ -15,28 +14,27 @@ const smallerThanMd = breakpoints.smaller('md')
 const { isOpen } = storeToRefs(useDrawerStore())
 const colorMode = useColorMode()
 const store = useDrawerStore()
-//animations
+// animations
 const showElem = ref(false)
 const closeTarget = ref(null)
 
-//click outside drawer to close it
+// click outside drawer to close it
 onClickOutside(closeTarget, () => store.isOpen = false)
 
 onMounted(() => {
   setTimeout(() => { showElem.value = true }, 100)
-  //logo
-  useScrollReveal('.logo', '10px', 'top', 100, 1000,)
-  //navigation menu
-  useScrollReveal('.navMenu1', '30px', 'top', 100, 500,)
-  useScrollReveal('.navMenu2', '30px', 'top', 200, 500,)
-  useScrollReveal('.navMenu3', '30px', 'top', 300, 500,)
-  useScrollReveal('.navMenu4', '30px', 'top', 400, 500,)
-  useScrollReveal('.navMenu5', '30px', 'top', 500, 500,)
-  useScrollReveal('.navMenu6', '30px', 'top', 600, 500,)
-  useScrollReveal('.navMenu7', '30px', 'top', 800, 500,)
-  useScrollReveal('.nav', '500px', 'bottom', 800, 500,)
+  // logo
+  useScrollReveal('.logo', '10px', 'top', 100, 1000)
+  // navigation menu
+  useScrollReveal('.navMenu1', '30px', 'top', 100, 500)
+  useScrollReveal('.navMenu2', '30px', 'top', 200, 500)
+  useScrollReveal('.navMenu3', '30px', 'top', 300, 500)
+  useScrollReveal('.navMenu4', '30px', 'top', 400, 500)
+  useScrollReveal('.navMenu5', '30px', 'top', 500, 500)
+  useScrollReveal('.navMenu6', '30px', 'top', 600, 500)
+  useScrollReveal('.navMenu7', '30px', 'top', 800, 500)
+  useScrollReveal('.nav', '500px', 'bottom', 800, 500)
 })
-
 </script>
 
 <template>
@@ -47,8 +45,10 @@ onMounted(() => {
           <LogoLight />
         </a>
       </div>
-      <div v-show="colorMode.value === 'dark'" class="logo flex items-center cursor-pointer animate-fadeInImage"
-        :class="`${showElem ? 'visible' : 'hidden'}`">
+      <div
+        v-show="colorMode.value === 'dark'" class="logo flex items-center cursor-pointer animate-fadeInImage"
+        :class="`${showElem ? 'visible' : 'hidden'}`"
+      >
         <a href="#home" aria-label="Tony Jemba" rel="noopener">
           <Logodark />
         </a>
@@ -65,24 +65,32 @@ onMounted(() => {
           <a class="cursor-pointer textLcolor navMenu3" href="#myProjects" :class="`${showElem ? 'visible' : 'hidden'}`">
             Projects
           </a>
-          <a class="cursor-pointer textLcolor navMenu4" :class="`${showElem ? 'visible' : 'hidden'}`"
-            href="https://medium.com/@tonyjemba" target="_blank">
+          <a
+            class="cursor-pointer textLcolor navMenu4" :class="`${showElem ? 'visible' : 'hidden'}`"
+            href="https://medium.com/@tonyjemba" target="_blank"
+          >
             Blog
           </a>
           <a class="cursor-pointer textLcolor navMenu5" :class="`${showElem ? 'visible' : 'hidden'}`" href="#contactMe">
             Contact
           </a>
-          <div class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan "
-            :class="`${showElem ? 'visible' : 'hidden'}`">
+          <div
+            class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan "
+            :class="`${showElem ? 'visible' : 'hidden'}`"
+          >
             <div class="text-center pt-2 pb-2 pl-3 pr-3 ">
               Resume
             </div>
           </div>
           <div class="navMenu7" :class="`${showElem ? 'visible' : 'hidden'}`">
-            <DarkIcon v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"
-              @click="colorMode.value = 'dark'" />
-            <LightIcon v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor "
-              @click="colorMode.value = 'light'" />
+            <DarkIcon
+              v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"
+              @click="colorMode.value = 'dark'"
+            />
+            <LightIcon
+              v-show="colorMode.value === 'dark'" class="cursor-pointer iconColor iconModeColor "
+              @click="colorMode.value = 'light'"
+            />
           </div>
         </div>
         <!-- below medium screens -->
@@ -121,7 +129,6 @@ onMounted(() => {
   background-color: #00ffe11a;
   transition: color .3s ease-in-out;
 }
-
 
 .iconColor {
   fill: black;

@@ -1,18 +1,16 @@
-
 <script setup lang="ts">
 import { onBeforeMount, onMounted } from 'vue'
-import { useDrawerStore } from '~/stores/drawer'
 import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import { useDrawerStore } from '~/stores/drawer'
 import { useScrollStore } from '~~/stores/scroll'
 
-
 const colorMode = useColorMode()
-//breakpoints
+// breakpoints
 const drawerStore = useDrawerStore()
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const smallerThanMd = breakpoints.smaller('md')
 const lgAndLarger = breakpoints.greaterOrEqual('lg')
-//showing nav on scroll
+// showing nav on scroll
 const scrollStore = useScrollStore()
 let lastScrollTop = scrollStore.fromTop
 
@@ -23,43 +21,44 @@ onBeforeMount(() => {
 
 const handleScroll = () => {
   //  check scroll up or down
-  let st = window.pageYOffset || document.documentElement.scrollTop
+  const st = window.pageYOffset || document.documentElement.scrollTop
   if (st > lastScrollTop) {
-    // downscroll 
+    // downscroll
     scrollStore.scrollUp = false
-  } else {
-    // upscroll 
+  }
+  else {
+    // upscroll
     scrollStore.scrollUp = true
   }
-  lastScrollTop = st <= 0 ? 0 : st;
-  //distance from top
+  lastScrollTop = st <= 0 ? 0 : st
+  // distance from top
   scrollStore.fromTop = window.scrollY
 }
 
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
-  //handle nav on scroll
+  // handle nav on scroll
   window.addEventListener('scroll', handleScroll)
-
 })
-
 </script>
 
 <template>
-
   <div class="$dark-mode relative flex flex-col">
     <!-- Drawer Overlay -->
-    <div class="fixed top-0 z-20 " v-show="drawerStore.isOpen && smallerThanMd">
-      <div class="h-screen w-screen absolute top-0 left-0 icy   "></div>
+    <div v-show="drawerStore.isOpen && smallerThanMd" class="fixed top-0 z-20 ">
+      <div class="h-screen w-screen absolute top-0 left-0 icy   " />
     </div>
 
     <div class="relative ">
       <!-- showing nav on scroll up -->
-      <div class="absolute z-50 w-full"
-        :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''">
+      <div
+        class="absolute z-50 w-full"
+        :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''"
+      >
         <Navigation
-          :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'backdrop-blur-sm icy2 shadow-2xl ' : ''" />
+          :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'backdrop-blur-sm icy2 shadow-2xl ' : ''"
+        />
       </div>
       <!-- nav hides on scroll -->
       <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
@@ -68,19 +67,18 @@ onMounted(() => {
         <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto ">
           <AboutMe />
           <ProjectSection />
-          <ContactSection  />
+          <ContactSection />
           <footer>
             <TheFooter />
           </footer>
         </div>
       </div>
-      <NavigationSides class="" :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' :'fadeOut'"
-        v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" />
+      <NavigationSides
+        v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" class=""
+        :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' : 'fadeOut'"
+      />
     </div>
-
-
   </div>
-
 </template>
 
 <style>
@@ -152,7 +150,6 @@ body {
 
 .icy2 {
   background-color: #06142885;
-
 
 }
 

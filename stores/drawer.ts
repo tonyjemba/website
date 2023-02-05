@@ -13,7 +13,6 @@ export const useDrawerStore = defineStore('drawerStore', {
   },
   actions: {
     changeStatus() {
-      console.log('clicked')
       this.isOpen = !this.isOpen
     },
 
