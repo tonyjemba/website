@@ -74,14 +74,16 @@ onMounted(() => {
           <a class="cursor-pointer textLcolor navMenu5" :class="`${showElem ? 'visible' : 'hidden'}`" href="#contactMe">
             Contact
           </a>
-          <div
+          <a
+          href="https://docs.google.com/uc?export=download&id=1FxTW_WFPVDqBkgAQeZGaKb6DQg6WPXDR"
+          download
             class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan "
             :class="`${showElem ? 'visible' : 'hidden'}`"
           >
             <div class="text-center pt-2 pb-2 pl-3 pr-3 ">
               Resume
             </div>
-          </div>
+          </a>
           <div class="navMenu7" :class="`${showElem ? 'visible' : 'hidden'}`">
             <DarkIcon
               v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"

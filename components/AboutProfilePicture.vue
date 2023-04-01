@@ -22,6 +22,6 @@ const isHovered = useElementHover(myHoverableElement)
 }
 
 .bpic {
-  background-image: url('~/assets/mypic.PNG');
+  background-image: url('~/assets/profilePicture.webp');
 }
 </style>

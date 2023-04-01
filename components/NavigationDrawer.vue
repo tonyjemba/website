@@ -15,7 +15,7 @@ const store = useDrawerStore()
 
 <template>
   <div
-    class="fixed bg-red-500 z-30 top-0 right-0 h-screen p-4 overflow-y-hidden drawerbg sm:w-3/5 w-4/5 "
+    class="fixed  z-30 top-0 right-0 h-screen p-4 overflow-y-hidden drawerbg sm:w-3/5 w-4/5 "
     :class="props.isOpen ? 'onScreen' : 'offScreen'"
   >
     <div class="w-full  flex justify-start pt-4 ">
@@ -41,11 +41,14 @@ const store = useDrawerStore()
         Contact
       </a>
       <div class="flex gap-x-11 pt-8">
-        <div class="cursor-pointer textLcolor border rounded resume-btn ">
+        <a
+          href="https://docs.google.com/uc?export=download&id=1FxTW_WFPVDqBkgAQeZGaKb6DQg6WPXDR"
+          download
+          class="cursor-pointer textLcolor border rounded resume-btn" >
           <div class="text-center mt-1 mb-2 mr-3 ml-3 colored">
             Resume
           </div>
-        </div>
+        </a>
         <div class="flex items-center ">
           <DarkIcon
             v-show="colorMode.value === 'light'" class="cursor-pointer iconColor iconModeColor"
