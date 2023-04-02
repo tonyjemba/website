@@ -14,9 +14,8 @@ onMounted(() => {
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center ">
       <div>
         <div class="font-gsans ">
-          Are you having a project that you would want me to help you with or you want to hire me, Always feel free to
-          reach me
-          out through my email, I will respond to you immediately. Thankyou
+          If you have a project that requires my expertise, or if you're interested in hiring me for a position, please don't hesitate to contact me via email. 
+          I make it a priority to respond promptly to all inquiries. Thank you for considering my services.
         </div>
         <div class="flex justify-center my-8 mb-56">
           <NuxtLink to="mailto:jjembatony@gmail.com">

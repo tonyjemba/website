@@ -16,19 +16,15 @@ onMounted(() => {
         <div class="w-full md:grow font-gsans">
           <div class=" space-y-6">
             <p>
-              Hello! My name is Tony and I enjoy creating things that live on the internet. My interest in web
-              development started back in 2010 when I
-              decided to try creating websites. I really enjoy this work.
+              Hello! My name is Tony, and I am a software engineer currently focusing on web development. I enjoy creating
+              things that live on the internet. My interest in web development started back in 2013, when I decided to try creating websites.
             </p>
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at a start-up, a huge corporation, and
-              a student-led design studio. My main focus these days is building accessible, inclusive products and
-              digital experiences
-              at Upstatement for a variety of clients.
+              My experience in software engineering has given me the skills and knowledge necessary to design, develop, and deploy software applications that meet the needs of businesses across a variety of industries.
             </p>
             <p>
-              I also recently created a youtube channel where I teach everything you need to know about making web apps
-              with the Vue related technologies Node & Laravel.
+              I have recently launched a YouTube channel where I provide comprehensive tutorials on using Vue, Node, Laravel, and other technologies to create, test, and deploy high-quality web applications. These tutorials cover everything from basic concepts to advanced techniques, ensuring that viewers have the knowledge and skills necessary to develop sophisticated applications. As a result of my expertise in web application development, I am confident that I would be a valuable addition 
+              to any software engineering team looking to create innovative, user-friendly applications that meet the needs of today's businesses.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
             <div class="grid grid-cols-2  gap-y-2 text-sm ">
@@ -38,6 +34,8 @@ onMounted(() => {
               <AboutSkillsList skill="Git" />
               <AboutSkillsList skill="vue (Nuxt)" />
               <AboutSkillsList skill="Node.js" />
+              <AboutSkillsList skill="Docker" />
+              <AboutSkillsList skill="Laravel" />
             </div>
           </div>
         </div>

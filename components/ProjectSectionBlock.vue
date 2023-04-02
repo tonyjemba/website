@@ -27,17 +27,15 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
             UVote System web
           </div>
           <div class="descriptionbg rounded font-gsans my-3 p-3 shadow-2xl">
-            This is a web based version of the UVote system that was used during the 2021 presidential elections, I was
-            hired to make this system,
-            within the shortest time possible. It is now a legacy system with some dependencies deprecated which makes
-            some features not to work like
-            they used to be.
+            As the developer behind the web-based UVote system utilized during the 2021 presidential elections, I was tasked with creating a robust and reliable system under tight time constraints. While successfully meeting this challenge,
+            The system has since become a legacy product with some deprecated dependencies, rendering it inoperable at the moment.
           </div>
           <div class="flex  gap-x-3.5 my-3" :class="props.alter ? ' justify-end' : ' justify-start'">
             <div>React</div>
             <div>Firebase</div>
             <div>JavaScript</div>
             <div>Redux</div>
+            <div>Cloud Functions</div>
           </div>
           <div class="flex  gap-x-4 mt-6" :class="props.alter ? ' justify-end' : ' justify-start'">
             <a href="https://github.com/tonyjemba/Presidential_campaign_App" target="_blank" aria-label="Github" rel="noopener">

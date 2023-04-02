@@ -82,16 +82,13 @@ onMounted(() => {
                   class="font-jost fonts3 text-center md:text-left target3"
                   :class="`${showElement ? 'visible' : 'hidden'}`"
                 >
-                  A Software Engineer From Kampala
+                  A creative software engineer based in Kampala
                 </div>
                 <div
                   class="font-jost fonts4 text-center md:text-left target4"
                   :class="`${showElement ? 'visible' : 'hidden'}`"
                 >
-                  I'm a creative software engineer based in Kampala,
-                  and
-                  I'm very
-                  passionate and dedicated to my work.
+                As a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.
                 </div>
                 <div
                   class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10  sm:gap-x-14  "
