@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-16',
-      viewport: 'width=500, initial-scale=1',
+      viewport: 'width=device-width, initial-scale=1',
       title: 'Tony Jemba',
       htmlAttrs: {
         lang: 'en',
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           hid: 'description',
-          content: 'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work',
+          content: 'As a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.',
         },
         {
           name: 'og: title',
@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         {
           name: 'og: description',
           hid: 'og: description',
-          content: 'Tony Jemba is a software Engineer from kampala who is so passionate and dedicated to his work',
+          content: 'As a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.',
         },
 
       ],
