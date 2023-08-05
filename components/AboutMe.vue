@@ -23,7 +23,7 @@ onMounted(() => {
               My experience in software engineering has given me the skills and knowledge necessary to design, develop, and deploy software applications that meet the needs of businesses across a variety of industries.
             </p>
             <p>
-              I have recently launched a YouTube channel where I provide comprehensive tutorials on using Vue, Node, Laravel, and other technologies to create, test, and deploy high-quality web applications. These tutorials cover everything from basic concepts to advanced techniques, ensuring that viewers have the knowledge and skills necessary to develop sophisticated applications. As a result of my expertise in web application development, I am confident that I would be a valuable addition 
+              I have recently launched a YouTube channel where I provide comprehensive tutorials on using Vue, Node, Laravel, and other technologies to create, test, and deploy high-quality web applications. These tutorials cover everything from basic concepts to advanced techniques, ensuring that viewers have the knowledge and skills necessary to develop sophisticated applications. As a result of my expertise in web application development, I am confident that I would be a valuable addition
               to any software engineering team looking to create innovative, user-friendly applications that meet the needs of today's businesses.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>

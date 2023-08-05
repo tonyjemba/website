@@ -44,7 +44,8 @@ const store = useDrawerStore()
         <a
           href="https://docs.google.com/uc?export=download&id=1FxTW_WFPVDqBkgAQeZGaKb6DQg6WPXDR"
           download
-          class="cursor-pointer textLcolor border rounded resume-btn" >
+          class="cursor-pointer textLcolor border rounded resume-btn"
+        >
           <div class="text-center mt-1 mb-2 mr-3 ml-3 colored">
             Resume
           </div>

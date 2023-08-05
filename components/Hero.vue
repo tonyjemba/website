@@ -88,7 +88,7 @@ onMounted(() => {
                   class="font-jost fonts4 text-center md:text-left target4"
                   :class="`${showElement ? 'visible' : 'hidden'}`"
                 >
-                As a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.
+                  As a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.
                 </div>
                 <div
                   class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10  sm:gap-x-14  "
