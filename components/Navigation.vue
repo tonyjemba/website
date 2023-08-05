@@ -75,8 +75,8 @@ onMounted(() => {
             Contact
           </a>
           <a
-          href="https://docs.google.com/uc?export=download&id=1FxTW_WFPVDqBkgAQeZGaKb6DQg6WPXDR"
-          download
+            href="https://docs.google.com/uc?export=download&id=1FxTW_WFPVDqBkgAQeZGaKb6DQg6WPXDR"
+            download
             class=" navMenu6 cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan "
             :class="`${showElem ? 'visible' : 'hidden'}`"
           >

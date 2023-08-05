@@ -40,7 +40,7 @@ import Medium from '~/assets/medium.svg'
           jjembatony@gmail.com
         </NuxtLink>
         <div class=" flex justify-center">
-          <div class="line" />
+          <div class="firefox line" />
         </div>
       </div>
     </div>
@@ -52,7 +52,13 @@ import Medium from '~/assets/medium.svg'
     width: 1px;
     height: 15vh;
     background-color: #ccd6f6;
+
 }
+@-moz-document url-prefix() {
+         .firefox {
+            margin-right: 0.75rem;
+         }
+      }
 
 .light-mode .line {
     background-color: #323231;
@@ -60,7 +66,6 @@ import Medium from '~/assets/medium.svg'
 
 .email {
     writing-mode: vertical-rl;
-    text-orientation: mixed;
 }
 
 .dark-mode .iconModeColor {
