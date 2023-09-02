@@ -37,7 +37,7 @@ import Medium from '~/assets/medium.svg'
           to="mailto:dev@tonyjemba.com"
           class="email font-jost tracking-wider textLcolor cursor-pointer "
         >
-        dev@tonyjemba.com
+          dev@tonyjemba.com
         </NuxtLink>
         <div class=" flex justify-center">
           <div class="firefox line" />
