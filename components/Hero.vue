@@ -95,7 +95,7 @@ onMounted(() => {
                   :class="`${showElement ? 'visible' : 'hidden'}`"
                 >
                   <NuxtLink
-                    to="mailto:jjembatony@gmail.com"
+                    to="mailto:dev@tonyjemba.com"
                     class=" cursor-pointer textL2color bg-opacity-0 border rounded border-mycyan  "
                   >
                     <div class="text-center pt-2 pb-2 pl-5 pr-5 ">
