@@ -4,10 +4,20 @@ import GithubLogo from '~/assets/github.svg'
 import DemoLink from '~/assets/demolink.svg'
 
 interface Props {
-  alter: Boolean
+  alter: boolean
+  projectDescription: string
+  projectTitle: string
+  projectHeading: string
+  projectTechnologies: string[]
+  projectImage: string
+  githubLink: string
+  demoLink: string
 }
 
 const props = defineProps<Props>()
+
+const Imagepath = '~/assets/project1.jpeg'
+
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const mdAndLarger = breakpoints.greaterOrEqual('md')
 </script>
@@ -16,32 +26,29 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
   <div>
     <div v-show="mdAndLarger" class="w-11/12 lg:w-full flex  justify-center mx-auto">
       <div class="w-10/12 mb-24 items-center flex  relative " :class="props.alter ? 'flex-row' : 'flex-row-reverse'">
-        <div class="fallbackcolor w-6/12 md:h-72 lg:h-96  rounded bgImage shadow-md cursor-pointer ">
+        <div class="fallbackcolor w-6/12 md:h-72 lg:h-96  rounded  shadow-md cursor-pointer bgImage" :style="{ backgroundImage: `url(${projectImage})` }">
           <div class="w-full h-full overlaycolor  rounded" />
         </div>
         <div class="  wid absolute " :class="props.alter ? 'right-0 text-right' : 'left-0 text-left'">
           <div class="font-gsans mb-1 titlecolor">
-            Featured Project
+            {{ props.projectTitle }}
           </div>
           <div class="font-jost  text-2xl mb-4 headingColor">
-            UVote System web
+            {{ props.projectHeading }}
           </div>
           <div class="descriptionbg rounded font-gsans my-3 p-3 shadow-2xl">
-            As the developer behind the web-based UVote system utilized during the 2021 presidential elections, I was tasked with creating a robust and reliable system under tight time constraints. While successfully meeting this challenge,
-            The system has since become a legacy product with some deprecated dependencies, rendering it inoperable at the moment.
+            {{ props.projectDescription }}
           </div>
           <div class="flex  gap-x-3.5 my-3" :class="props.alter ? ' justify-end' : ' justify-start'">
-            <div>React</div>
-            <div>Firebase</div>
-            <div>JavaScript</div>
-            <div>Redux</div>
-            <div>Cloud Functions</div>
+            <div v-for=" (tech, index) in props.projectTechnologies " :key=" `${tech}${index}` ">
+              <div>{{ tech }}</div>
+            </div>
           </div>
           <div class="flex  gap-x-4 mt-6" :class="props.alter ? ' justify-end' : ' justify-start'">
-            <a href="https://github.com/tonyjemba/Presidential_campaign_App" target="_blank" aria-label="Github" rel="noopener">
+            <a :href="githubLink" target="_blank" aria-label="Github" rel="noopener">
               <GithubLogo class="cursor-pointer iconColor iconModeColor" />
             </a>
-            <a href="https://projectk21-1a365.web.app/" target="_blank" aria-label="Demo" rel="noopener">
+            <a :href="demoLink" target="_blank" aria-label="Demo" rel="noopener">
               <DemoLink class="cursor-pointer iconColor iconModeColor" />
             </a>
           </div>
@@ -50,32 +57,34 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
     </div>
     <!-- mobile -->
     <div v-show="!mdAndLarger" class="w-11/12 flex  justify-center mx-auto rounded ">
-      <div class="w-full sm:w-10/12 mb-24 h-auto fallbackcolor rounded bgImageMobile ">
+      <div class="w-full sm:w-10/12 mb-24 h-auto fallbackcolor rounded bgImageMobile " :style="{ backgroundImage: `url(${projectImage})` }">
         <div class="  w-full p-6 overlayMobile rounded">
           <div class="font-gsans mb-1 titlecolor">
-            Featured Project
+            {{ props.projectTitle }}
           </div>
           <div class="font-jost  text-2xl mb-4 headingColor">
-            Grabit Ecommerce
+            {{ props.projectHeading }}
           </div>
           <div class=" rounded font-gsans my-3 p-3 text-gray-600 ">
-            A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played
-            tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks
-            based on your existing playlists and more.
+            {{ props.projectDescription }}
           </div>
           <div class="flex  gap-x-3.5 my-3">
-            <div class="font-fira">
-              VS Code
+            <div v-for=" (tech, index) in props.projectTechnologies " :key=" `${tech}${index}` ">
+              <div class="font-fira">
+                {{ tech }}
+              </div>
             </div>
-            <div>Atom</div>
-            <div>Typescript</div>
           </div>
           <div class="flex  gap-x-3.5 mt-6">
             <div>
-              <GithubLogo class="cursor-pointer iconColor iconModeColor" />
+              <a :href="githubLink" target="_blank" aria-label="Github" rel="noopener">
+                <GithubLogo class="cursor-pointer iconColor iconModeColor" />
+              </a>
             </div>
             <div>
-              <DemoLink class="cursor-pointer iconColor iconModeColor" />
+              <a :href="demoLink" target="_blank" aria-label="Demo" rel="noopener">
+                <DemoLink class="cursor-pointer iconColor iconModeColor" />
+              </a>
             </div>
           </div>
         </div>
@@ -85,15 +94,18 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
 </template>
 
 <style scoped>
+.background-component {
+  /* Set other styling properties */
+  background-size: cover;
+  background-position: center;
+}
 .bgImage {
-  background-image: url('~/assets/1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   transition: background-position 1.5s;
 }
 
 .bgImageMobile {
-  background-image: url('~/assets/1.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
 }

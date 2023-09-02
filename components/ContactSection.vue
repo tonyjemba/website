@@ -14,11 +14,12 @@ onMounted(() => {
     <div class="w-11/12 sm:w-8/12 md:w-8/12 lg:w-5/12 mx-auto text-center ">
       <div>
         <div class="font-gsans ">
-          If you have a project that requires my expertise, or if you're interested in hiring me for a position, please don't hesitate to contact me via email.
-          I make it a priority to respond promptly to all inquiries. Thank you for considering my services.
+          <!-- If you have a project that requires my expertise, or if you're interested in hiring me for a position, please don't hesitate to contact me via email.
+          I make it a priority to respond promptly to all inquiries. Thank you for considering my services. -->
+          I'm currently dedicated to my role at Trail Analytics and not actively seeking new employment opportunities. However, I remain open to inquiries and exciting collaborations on projects or startup initiatives. If you have an interesting project or partnership idea, please feel free to reach out via email. I value every opportunity to explore new ventures and contribute my expertise. Thank you.
         </div>
         <div class="flex justify-center my-8 mb-56">
-          <NuxtLink to="mailto:jjembatony@gmail.com">
+          <NuxtLink to="mailto:dev@tonyjemba.com">
             <div class=" cursor-pointer  textLcolor  bg-opacity-0 border rounded border-mycyan">
               <div class="text-center pt-3 pb-3 pr-5 pl-5 font-gsans font-bold">
                 Contact me
