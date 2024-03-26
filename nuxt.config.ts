@@ -1,6 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt',
+  modules: ['nuxt-vercel-analytics', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt',
     ['@nuxtjs/google-fonts', {
       families: {
         'Open+Sans': [400, 500],
