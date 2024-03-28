@@ -59,7 +59,7 @@ onMounted(() => {
   <div class="$dark-mode relative flex flex-col">
     <!-- Drawer Overlay -->
     <div v-if="loading">
-      <div class="h-screen w-screen flex justify-center items-center">
+      <div class="h-screen w-screen flex flex-col justify-center items-center">
         <div class="initTextColor">
           Tony Jemba Software Engineer
         </div>
