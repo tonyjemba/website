@@ -1,3 +1,4 @@
+<!-- eslint-disable eslint-comments/no-unlimited-disable -->
 <script setup lang="ts">
 import {
   breakpointsTailwind,
@@ -41,7 +42,8 @@ watch(iconsVisible, (newVal) => {
 onMounted(() => {
   setTimeout(() => {
     reactiveState.showElement = true
-    console.log("Built by Tony Jemba")
+
+    console.log('Built by Tony Jemba') // eslint-disable-line
   }, 1000)
 
   // await delayHeroContent(1000)
@@ -66,10 +68,7 @@ onMounted(() => {
 
   // chaging icons on blob
   iconStore.changeInterval()
-
 })
-
-}
 </script>
 
 <template>
