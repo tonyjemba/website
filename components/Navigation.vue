@@ -37,7 +37,9 @@ onMounted(() => {
   useScrollReveal('.navMenu7', '30px', 'top', 800, 500)
   useScrollReveal('.nav', '500px', 'bottom', 800, 500)
 
-  setTimeout(() => { animationStore.changeStatus() }, 1000)
+  setTimeout(() => { 
+    animationStore.changeStatus()
+  console.log('Built by Tony Jemba') }, 0)
 })
 </script>
 

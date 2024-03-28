@@ -61,12 +61,12 @@ onMounted(() => {
   ).start()
 
   // animations
-  useScrollReveal('.target1', '30px', 'bottom', 1900, 1000)
-  useScrollReveal('.target2', '30px', 'bottom', 2100, 1000)
-  useScrollReveal('.target3', '30px', 'bottom', 2200, 1000)
-  useScrollReveal('.target4', '30px', 'bottom', 2300, 1000)
-  useScrollReveal('.target5', '30px', 'bottom', 2400, 1000)
-  useScrollReveal('.target6', '30px', 'right', 2500, 1000)
+  useScrollReveal('.target1', '30px', 'bottom', 900, 1000)
+  useScrollReveal('.target2', '30px', 'bottom', 1100, 1000)
+  useScrollReveal('.target3', '30px', 'bottom', 1200, 1000)
+  useScrollReveal('.target4', '30px', 'bottom', 1300, 1000)
+  useScrollReveal('.target5', '30px', 'bottom', 1400, 1000)
+  useScrollReveal('.target6', '30px', 'right', 1500, 1000)
   KUTE.fromTo(vuelogo.value, { translateY: 100 }, { translateX: 125 }).start()
 
   // chaging icons on blob
