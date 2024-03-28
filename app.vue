@@ -60,8 +60,14 @@ onMounted(() => {
     <!-- Drawer Overlay -->
     <div v-if="loading">
       <div class="h-screen w-screen flex justify-center items-center">
+        <div class="initTextColor">
+          Tony Jemba Software Engineer
+        </div>
         <div class="">
           Please wait ...
+        </div>
+        <div class="initTextColor">
+          Tony Jemba
         </div>
       </div>
     </div>
@@ -126,7 +132,9 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
 }
-
+.initTextColor{
+  color:#061428;
+}
 .dark-mode body {
   background-color: rgb(6, 20, 40);
   color: #8892b0;
