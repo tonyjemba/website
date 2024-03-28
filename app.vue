@@ -13,7 +13,11 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
 // showing nav on scroll
 const scrollStore = useScrollStore()
 let lastScrollTop = scrollStore.fromTop
-
+const nuxtApp = useNuxtApp()
+const loading = ref(true)
+nuxtApp.hook('app:suspense:resolve', () => {
+  loading.value = false
+})
 useHead(() => {
   return {
     meta: [
@@ -52,10 +56,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <Suspense>
-    <div class="$dark-mode relative flex flex-col">
-      <!-- Drawer Overlay -->
-      <div v-show="drawerStore.isOpen && smallerThanMd" class="fixed top-0 z-20">
+  <div class="$dark-mode relative flex flex-col">
+    <!-- Drawer Overlay -->
+    <div v-if="loading">
+      <div class="h-screen w-screen flex justify-center items-center">
+        <div class="">
+          Please wait ...
+        </div>
+      </div>
+    </div>
+    <div v-else>
+      <div
+        v-show="drawerStore.isOpen && smallerThanMd"
+        class="fixed top-0 z-20"
+      >
         <div class="h-screen w-screen absolute top-0 left-0 icy" />
       </div>
 
@@ -101,10 +115,7 @@ onMounted(() => {
         />
       </div>
     </div>
-    <template #fallback>
-      Loading...
-    </template>
-  </Suspense>
+  </div>
 </template>
 
 <style>

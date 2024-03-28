@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
-import GithubLogo from "~/assets/github.svg";
-import DemoLink from "~/assets/demolink.svg";
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+import GithubLogo from '~/assets/github.svg'
+import DemoLink from '~/assets/demolink.svg'
 
 interface Props {
-  alter: boolean;
-  projectDescription: string;
-  projectTitle: string;
-  projectHeading: string;
-  projectTechnologies: string[];
-  projectImage: string;
-  githubLink: string;
-  demoLink: string;
+  alter: boolean
+  projectDescription: string
+  projectTitle: string
+  projectHeading: string
+  projectTechnologies: string[]
+  projectImage: string
+  githubLink: string
+  demoLink: string
 }
 
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
-const Imagepath = "~/assets/project1.jpeg";
+const Imagepath = '~/assets/project1.jpeg'
 
-const breakpoints = useBreakpoints(breakpointsTailwind);
-const mdAndLarger = breakpoints.greaterOrEqual("md");
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const mdAndLarger = breakpoints.greaterOrEqual('md')
 </script>
 
 <template>
