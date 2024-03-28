@@ -3,9 +3,10 @@ import {
   breakpointsTailwind,
   useBreakpoints,
   useElementVisibility,
+  useTimeoutFn,
 } from '@vueuse/core'
 import KUTE from 'kute.js'
-import { onBeforeMount, onMounted, ref } from 'vue'
+import { onBeforeMount, onMounted, reactive, ref } from 'vue'
 import Landscapedark from '~/assets/land5.svg'
 import Landscapelight from '~/assets/landlight3.svg'
 import Github from '~/assets/github.svg'
@@ -22,7 +23,8 @@ const colorMode = useColorMode()
 const blobl = ref()
 const blob2 = ref()
 const vuelogo = ref()
-const showElement = ref(false)
+const reactiveState = reactive({ showElement: false })
+
 // for switching icons
 const iconStore = useIconInterval()
 // to track whether the social icons are in the viewport
@@ -38,8 +40,14 @@ watch(iconsVisible, (newVal) => {
 // activating animations on component mount
 onMounted(() => {
   setTimeout(() => {
-    showElement.value = true
+    reactiveState.showElement = true
+    console.log("Built by Tony Jemba")
   }, 1000)
+
+  // await delayHeroContent(1000)
+  // useTimeoutFn(() => {
+  //   reactiveState.showElement = true
+  // }, 1100)
   KUTE.fromTo(
     blobl.value,
     { path: blobl.value },
@@ -48,17 +56,20 @@ onMounted(() => {
   ).start()
 
   // animations
-  useScrollReveal('.target1', '30px', 'bottom', 900, 1000)
-  useScrollReveal('.target2', '30px', 'bottom', 1100, 1000)
-  useScrollReveal('.target3', '30px', 'bottom', 1200, 1000)
-  useScrollReveal('.target4', '30px', 'bottom', 1300, 1000)
-  useScrollReveal('.target5', '30px', 'bottom', 1400, 1000)
-  useScrollReveal('.target6', '30px', 'right', 1500, 1000)
+  useScrollReveal('.target1', '30px', 'bottom', 1900, 1000)
+  useScrollReveal('.target2', '30px', 'bottom', 2100, 1000)
+  useScrollReveal('.target3', '30px', 'bottom', 2200, 1000)
+  useScrollReveal('.target4', '30px', 'bottom', 2300, 1000)
+  useScrollReveal('.target5', '30px', 'bottom', 2400, 1000)
+  useScrollReveal('.target6', '30px', 'right', 2500, 1000)
   KUTE.fromTo(vuelogo.value, { translateY: 100 }, { translateX: 125 }).start()
 
   // chaging icons on blob
   iconStore.changeInterval()
+
 })
+
+}
 </script>
 
 <template>
@@ -74,25 +85,25 @@ onMounted(() => {
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
                 <div
                   class="font-jost fonts1 c2 water text-center md:text-left target1"
-                  :class="`${showElement ? 'visible' : 'hidden'}`"
+                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
                 >
                   Hello I'm
                 </div>
                 <div
                   class="font-jost fonts2 font-bold c1 text-center md:text-left target2"
-                  :class="`${showElement ? 'visible' : 'hidden'}`"
+                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
                 >
                   Tony Jemba
                 </div>
                 <div
                   class="font-jost fonts3 text-center md:text-left target3"
-                  :class="`${showElement ? 'visible' : 'hidden'}`"
+                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
                 >
                   A creative software engineer based in Kampala
                 </div>
                 <div
                   class="font-jost fonts4 text-center md:text-left target4"
-                  :class="`${showElement ? 'visible' : 'hidden'}`"
+                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
                 >
                   As a passionate and experienced software engineer, I am
                   dedicated to delivering innovative and efficient solutions
@@ -100,7 +111,7 @@ onMounted(() => {
                 </div>
                 <div
                   class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10 sm:gap-x-14"
-                  :class="`${showElement ? 'visible' : 'hidden'}`"
+                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
                 >
                   <NuxtLink
                     to="mailto:dev@tonyjemba.com"
@@ -182,7 +193,7 @@ onMounted(() => {
               <div
                 v-show="lgAndLarger"
                 class="relative target6 w-2/4 flex justify-center items-center"
-                :class="`${showElement ? 'visible' : 'hidden'}`"
+                :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
               >
                 <div>
                   <div
