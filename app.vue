@@ -14,6 +14,14 @@ const lgAndLarger = breakpoints.greaterOrEqual('lg')
 const scrollStore = useScrollStore()
 let lastScrollTop = scrollStore.fromTop
 
+useHead(() => {
+  return {
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
+  }
+})
+
 onBeforeMount(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
@@ -44,41 +52,59 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="$dark-mode relative flex flex-col">
-    <!-- Drawer Overlay -->
-    <div v-show="drawerStore.isOpen && smallerThanMd" class="fixed top-0 z-20 ">
-      <div class="h-screen w-screen absolute top-0 left-0 icy   " />
-    </div>
+  <Suspense>
+    <div class="$dark-mode relative flex flex-col">
+      <!-- Drawer Overlay -->
+      <div v-show="drawerStore.isOpen && smallerThanMd" class="fixed top-0 z-20">
+        <div class="h-screen w-screen absolute top-0 left-0 icy" />
+      </div>
 
-    <div class="relative ">
-      <!-- showing nav on scroll up -->
-      <div
-        class="absolute z-50 w-full"
-        :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'sticky top-0  fadeIn ' : ''"
-      >
-        <Navigation
-          :class="scrollStore.fromTop > 0 && scrollStore.scrollUp ? 'backdrop-blur-sm icy2 shadow-2xl ' : ''"
+      <div class="relative">
+        <!-- showing nav on scroll up -->
+        <div
+          class="absolute z-50 w-full"
+          :class="
+            scrollStore.fromTop > 0 && scrollStore.scrollUp
+              ? 'sticky top-0  fadeIn '
+              : ''
+          "
+        >
+          <Navigation
+            :class="
+              scrollStore.fromTop > 0 && scrollStore.scrollUp
+                ? 'backdrop-blur-sm icy2 shadow-2xl '
+                : ''
+            "
+          />
+        </div>
+        <!-- nav hides on scroll -->
+        <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
+        <Hero />
+        <div class="w-full flex justify-center">
+          <div class="lg:absolute lg:z-20 lg:w-10/12 lg:mx-auto">
+            <AboutMe />
+            <ProjectSection />
+            <ContactSection />
+            <footer>
+              <TheFooter />
+            </footer>
+          </div>
+        </div>
+        <NavigationSides
+          v-if="lgAndLarger && !scrollStore.iconsInHeroVisible"
+          class=""
+          :class="
+            lgAndLarger && !scrollStore.iconsInHeroVisible
+              ? 'fadeIn'
+              : 'fadeOut'
+          "
         />
       </div>
-      <!-- nav hides on scroll -->
-      <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
-      <Hero />
-      <div class="w-full flex justify-center">
-        <div class="lg:absolute lg:z-20  lg:w-10/12 lg:mx-auto ">
-          <AboutMe />
-          <ProjectSection />
-          <ContactSection />
-          <footer>
-            <TheFooter />
-          </footer>
-        </div>
-      </div>
-      <NavigationSides
-        v-if="lgAndLarger && !scrollStore.iconsInHeroVisible" class=""
-        :class="lgAndLarger && !scrollStore.iconsInHeroVisible ? 'fadeIn' : 'fadeOut'"
-      />
     </div>
-  </div>
+    <template #fallback>
+      Loading...
+    </template>
+  </Suspense>
 </template>
 
 <style>
@@ -92,13 +118,11 @@ body {
 
 .dark-mode body {
   background-color: rgb(6, 20, 40);
-  color: #8892B0;
-
+  color: #8892b0;
 }
 
 .light-mode body {
   background-color: #f1f1f1;
-
 }
 
 .sepia-mode body {
@@ -113,7 +137,11 @@ body {
 }
 
 .light-mode .icy {
-  background: linear-gradient(135deg, rgba(246, 245, 241, 0.1), rgba(246, 245, 241, 0));
+  background: linear-gradient(
+    135deg,
+    rgba(246, 245, 241, 0.1),
+    rgba(246, 245, 241, 0)
+  );
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -150,7 +178,6 @@ body {
 
 .icy2 {
   background-color: #06142885;
-
 }
 
 .light-mode .icy2 {

@@ -96,7 +96,7 @@ onMounted(() => {
           </div>
         </div>
         <!-- below medium screens -->
-        <div v-show="smallerThanMd" class="flex justify-end z-50  ">
+        <div v-if="smallerThanMd" class="flex justify-end z-50  ">
           <NavigationDrawerIcon :status="store.changeStatus" />
           <NavigationDrawer ref="closeTarget" :is-open="isOpen" />
         </div>
