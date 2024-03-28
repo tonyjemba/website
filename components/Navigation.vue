@@ -7,6 +7,7 @@ import Logodark from '~/assets/logo-dark.svg'
 import LightIcon from '~/assets/sun.svg'
 import DarkIcon from '~/assets/moon.svg'
 import { useDrawerStore } from '~~/stores/drawer'
+import { useNavigationAnimation } from '~~/stores/navigationAnimation'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const mdAndLarger = breakpoints.greaterOrEqual('md')
@@ -14,6 +15,7 @@ const smallerThanMd = breakpoints.smaller('md')
 const { isOpen } = storeToRefs(useDrawerStore())
 const colorMode = useColorMode()
 const store = useDrawerStore()
+const animationStore = useNavigationAnimation()
 // animations
 const showElem = ref(false)
 const closeTarget = ref(null)
@@ -34,6 +36,8 @@ onMounted(() => {
   useScrollReveal('.navMenu6', '30px', 'top', 600, 500)
   useScrollReveal('.navMenu7', '30px', 'top', 800, 500)
   useScrollReveal('.nav', '500px', 'bottom', 800, 500)
+
+  setTimeout(() => { animationStore.changeStatus() }, 1000)
 })
 </script>
 

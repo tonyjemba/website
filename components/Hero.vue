@@ -7,7 +7,7 @@ import {
   useTimeoutFn,
 } from '@vueuse/core'
 import KUTE from 'kute.js'
-import { onBeforeMount, onMounted, reactive, ref } from 'vue'
+import { onMounted, reactive, ref, watch } from 'vue'
 import Landscapedark from '~/assets/land5.svg'
 import Landscapelight from '~/assets/landlight3.svg'
 import Github from '~/assets/github.svg'
@@ -17,6 +17,7 @@ import Youtube from '~/assets/youtube.svg'
 import Medium from '~/assets/medium.svg'
 import { useIconInterval } from '~/stores/iconInterval'
 import { useScrollStore } from '~/stores/scroll'
+import { useNavigationAnimation } from '~~/stores/navigationAnimation'
 
 const breakpoints = useBreakpoints(breakpointsTailwind)
 const lgAndLarger = breakpoints.greaterOrEqual('lg')
@@ -30,6 +31,8 @@ const reactiveState = reactive({ showElement: false })
 const iconStore = useIconInterval()
 // to track whether the social icons are in the viewport
 const scrollStore = useScrollStore()
+const headerAnimationStore = useNavigationAnimation()
+const topAnimation = ref(headerAnimationStore.status)
 const icons = ref(null)
 const iconsVisible = useElementVisibility(icons)
 
@@ -40,11 +43,11 @@ watch(iconsVisible, (newVal) => {
 
 // activating animations on component mount
 onMounted(() => {
-  setTimeout(() => {
-    reactiveState.showElement = true
+  // setTimeout(() => {
+  //   reactiveState.showElement = true
 
-    console.log('Built by Tony Jemba') // eslint-disable-line
-  }, 1000)
+  //   console.log('Built by Tony Jemba') // eslint-disable-line
+  // }, 1000)
 
   // await delayHeroContent(1000)
   // useTimeoutFn(() => {
@@ -84,25 +87,25 @@ onMounted(() => {
               <div class="w-full lg:w-2/4 text-lg space-y-8 lg:space-y-10">
                 <div
                   class="font-jost fonts1 c2 water text-center md:text-left target1"
-                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                  :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
                 >
                   Hello I'm
                 </div>
                 <div
                   class="font-jost fonts2 font-bold c1 text-center md:text-left target2"
-                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                  :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
                 >
                   Tony Jemba
                 </div>
                 <div
                   class="font-jost fonts3 text-center md:text-left target3"
-                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                  :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
                 >
                   A creative software engineer based in Kampala
                 </div>
                 <div
                   class="font-jost fonts4 text-center md:text-left target4"
-                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                  :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
                 >
                   As a passionate and experienced software engineer, I am
                   dedicated to delivering innovative and efficient solutions
@@ -110,7 +113,7 @@ onMounted(() => {
                 </div>
                 <div
                   class="target5 flex flex-col sm:flex-row justify-center md:justify-start gap-y-10 sm:gap-x-14"
-                  :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                  :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
                 >
                   <NuxtLink
                     to="mailto:dev@tonyjemba.com"
@@ -192,7 +195,7 @@ onMounted(() => {
               <div
                 v-show="lgAndLarger"
                 class="relative target6 w-2/4 flex justify-center items-center"
-                :class="`${reactiveState.showElement ? 'visible' : 'hidden'}`"
+                :class="`${headerAnimationStore.status ? 'visible' : 'hidden'}`"
               >
                 <div>
                   <div
