@@ -26,6 +26,25 @@ useHead(() => {
   }
 })
 
+useSeoMeta({
+  author: 'Tony Jemba',
+  publisher: 'Tony Jemba',
+  creator: 'Tony Jemba',
+  ogUrl: 'https://www.tonyjemba.com',
+  ogSiteName: 'Tony Jemba | Software Engineer Portfolio',
+  ogImage: '/tonyjemba.png',
+  ogImageUrl: '/tonyjemba.png',
+  ogImageSecureUrl: '/tonyjemba.png',
+  ogImageAlt: 'Tony Jemba',
+  twitterCard: 'summary',
+  twitterTitle: 'Tony Jemba | Software Engineer',
+  twitterDescription: 'I am currently available for new career opportunities or open-source contributions, and I am eager to explore diverse roles and contribute my skills to innovative projects or initiatives.',
+  twitterImage: '/tonyjemba.png',
+  twitterImageAlt: 'Tony Jemba | Software Engineer',
+  twitterSite: '@tonyjemba',
+  themeColor: '#061428',
+})
+
 onBeforeMount(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'

@@ -25,17 +25,17 @@ export default defineNuxtConfig({
         {
           name: 'description',
           hid: 'description',
-          content: 'My name is Tony Jemba a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.',
+          content: 'My name is Tony Jemba a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses. I am currently available for new career opportunities and am eager to explore diverse roles and contribute my skills to innovative projects or initiatives.',
         },
         {
           name: 'og: title',
           hid: 'og: title',
-          content: 'Tony Jemba',
+          content: 'Tony Jemba | Software Engineer',
         },
         {
           name: 'og: description',
           hid: 'og: description',
-          content: 'My name is Tony Jemba a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses.',
+          content: 'My name is Tony Jemba a passionate and experienced software engineer, I am dedicated to delivering innovative and efficient solutions that meet the needs of modern businesses. I am currently available for new career opportunities and am eager to explore diverse roles and contribute my skills to innovative projects or initiatives.',
         },
 
       ],
