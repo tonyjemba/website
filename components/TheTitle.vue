@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 interface Props {
-  heading: String
-  underlineClass: String
+  heading: string
+  underlineClass: string
 }
 const props = defineProps<Props>()
 </script>

@@ -2,7 +2,7 @@
 import Triangle from '~/assets/triangle.svg'
 
 interface Props {
-  skill: String
+  skill: string
 }
 
 const props = defineProps<Props>()

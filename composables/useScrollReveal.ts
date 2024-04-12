@@ -1,4 +1,4 @@
-export const useScrollReveal = (target: string, distance: string, origin: string, delay: number, duration: number): void => {
+export function useScrollReveal(target: string, distance: string, origin: string, delay: number, duration: number): void {
   const nuxtApp = useNuxtApp()
 
   nuxtApp.$ScrollReveal().reveal(target, {

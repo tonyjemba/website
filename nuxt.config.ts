@@ -1,12 +1,11 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['nuxt-vercel-analytics', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/seo',
-    ['@nuxtjs/google-fonts', {
-      families: {
-        'Open+Sans': [400, 500],
-        'Jost': [500],
-      },
-    }]],
+  modules: ['nuxt-vercel-analytics', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/seo', ['@nuxtjs/google-fonts', {
+    families: {
+      'Open+Sans': [400, 500],
+      'Jost': [500],
+    },
+  }]],
 
   colorMode: {
     preference: 'dark', // default value of $colorMode.preference
@@ -40,7 +39,8 @@ export default defineNuxtConfig({
 
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
     },
   },
 

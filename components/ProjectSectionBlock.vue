@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
-import GithubLogo from '~/assets/github.svg'
-import DemoLink from '~/assets/demolink.svg'
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+import GithubLogo from "~/assets/github.svg";
+import DemoLink from "~/assets/demolink.svg";
 
 interface Props {
-  alter: boolean
-  projectDescription: string
-  projectTitle: string
-  projectHeading: string
-  projectTechnologies: string[]
-  projectImage: string
-  githubLink: string
-  demoLink: string
+  alter: boolean;
+  projectDescription: string;
+  projectTitle: string;
+  projectHeading: string;
+  projectTechnologies: string[];
+  projectImage: string;
+  githubLink: string;
+  demoLink: string;
 }
 
-const props = defineProps<Props>()
+const props = defineProps<Props>();
 
-const Imagepath = '~/assets/project1.jpeg'
+const Imagepath = "~/assets/project1.jpeg";
 
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const mdAndLarger = breakpoints.greaterOrEqual('md')
+const breakpoints = useBreakpoints(breakpointsTailwind);
+const mdAndLarger = breakpoints.greaterOrEqual("md");
 </script>
 
 <template>
   <div>
     <div
       v-show="mdAndLarger"
-      class="w-11/12 lg:w-full flex justify-center mx-auto "
+      class="w-11/12 lg:w-full flex justify-center mx-auto"
     >
       <div
         class="w-10/12 mb-24 items-center flex relative"
@@ -106,14 +106,14 @@ const mdAndLarger = breakpoints.greaterOrEqual('md')
             {{ props.projectDescription }}
           </div>
           <div class="flex gap-x-3.5 my-3">
-            <div
+            <!-- <div
               v-for="(tech, index) in props.projectTechnologies"
               :key="`${tech}${index}`"
             >
               <div class="font-fira">
                 {{ tech }}
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="flex gap-x-3.5 mt-6">
             <div>

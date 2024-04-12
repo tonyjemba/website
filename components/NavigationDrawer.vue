@@ -5,7 +5,7 @@ import { useDrawerStore } from '~~/stores/drawer'
 
 // opening and closing drawer basing on the isOpen prop value
 interface Props {
-  isOpen: Boolean
+  isOpen: boolean
 }
 
 const props = defineProps<Props>()

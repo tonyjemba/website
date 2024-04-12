@@ -38,7 +38,8 @@ useSeoMeta({
   ogImageAlt: 'Tony Jemba',
   twitterCard: 'summary',
   twitterTitle: 'Tony Jemba | Software Engineer',
-  twitterDescription: 'I am currently available for new career opportunities or open-source contributions, and I am eager to explore diverse roles and contribute my skills to innovative projects or initiatives.',
+  twitterDescription:
+    'I am currently available for new career opportunities or open-source contributions, and I am eager to explore diverse roles and contribute my skills to innovative projects or initiatives.',
   twitterImage: '/tonyjemba.png',
   twitterImageAlt: 'Tony Jemba | Software Engineer',
   twitterSite: '@tonyjemba',
@@ -50,7 +51,7 @@ onBeforeMount(() => {
   colorMode.value = 'dark'
 })
 
-const handleScroll = () => {
+function handleScroll() {
   //  check scroll up or down
   const st = window.pageYOffset || document.documentElement.scrollTop
   if (st > lastScrollTop) {
@@ -119,6 +120,7 @@ onMounted(() => {
         <!-- nav hides on scroll -->
         <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
         <Hero />
+
         <div class="w-full flex justify-center">
           <div class="lg:absolute lg:z-20 lg:w-10/12 lg:mx-auto">
             <AboutMe />
@@ -151,8 +153,8 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
 }
-.initTextColor{
-  color:#061428;
+.initTextColor {
+  color: #061428;
 }
 .dark-mode body {
   background-color: rgb(6, 20, 40);

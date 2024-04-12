@@ -4,7 +4,6 @@ import {
   breakpointsTailwind,
   useBreakpoints,
   useElementVisibility,
-  useTimeoutFn,
 } from '@vueuse/core'
 import KUTE from 'kute.js'
 import { onMounted, reactive, ref, watch } from 'vue'
