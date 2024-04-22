@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   site: {
     // production URL
     url: 'https://www.tonyjemba.com',
-    name: 'Tony Jemba | Software Engineer',
+    name: 'Software Engineer',
   },
 
   devtools: {
