@@ -79,13 +79,14 @@ onMounted(() => {
   <div class="$dark-mode relative flex flex-col">
     <!-- Drawer Overlay -->
     <div v-if="loading">
-      <div class="h-screen w-screen flex flex-col justify-center items-center">
+      <div class="flex flex-col items-center justify-center w-screen h-screen">
         <div class="initTextColor">
           Tony Jemba Software Engineer
         </div>
-        <div class="">
-          Please wait ...
-        </div>
+          <div class="mb-40">
+            <LoadingRipple/>
+          </div>
+          <div><LoadingWord/></div>
         <div class="initTextColor">
           Tony Jemba
         </div>
@@ -96,7 +97,7 @@ onMounted(() => {
         v-show="drawerStore.isOpen && smallerThanMd"
         class="fixed top-0 z-20"
       >
-        <div class="h-screen w-screen absolute top-0 left-0 icy" />
+        <div class="absolute top-0 left-0 w-screen h-screen icy" />
       </div>
 
       <div class="relative">
@@ -121,7 +122,7 @@ onMounted(() => {
         <Navigation :class="scrollStore.fromTop > 0 ? 'hidden' : 'visible '" />
         <Hero />
 
-        <div class="w-full flex justify-center">
+        <div class="flex justify-center w-full">
           <div class="lg:absolute lg:z-20 lg:w-10/12 lg:mx-auto">
             <AboutMe />
             <ProjectSection />
