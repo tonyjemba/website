@@ -70,7 +70,7 @@ function handleScroll() {
 onMounted(() => {
   colorMode.preference = 'dark'
   colorMode.value = 'dark'
-  // handle nav on scroll
+  // handle nav on scroll event
   window.addEventListener('scroll', handleScroll)
 })
 </script>

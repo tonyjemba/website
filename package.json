@@ -1,4 +1,4 @@
-{
+git {
   "type": "module",
   "scripts": {
     "build": "nuxt build",
