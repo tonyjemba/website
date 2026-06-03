@@ -1,6 +1,8 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['nuxt-vercel-analytics', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/seo', ['@nuxtjs/google-fonts', {
+  modules: ['nuxt-vercel-analytics', '@nuxtjs/color-mode', 'nuxt-svgo', '@pinia/nuxt', '@vueuse/nuxt', '@nuxtjs/seo', ['@nuxtjs/google-fonts', {
     families: {
       'Open+Sans': [400, 500],
       'Jost': [500],
@@ -11,6 +13,14 @@ export default defineNuxtConfig({
     preference: 'dark', // default value of $colorMode.preference
     fallback: 'dark', // fallback value if not system preference found
   },
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  // main CSS file is loaded globally
+  css: ['~/assets/css/main.css'],
 
   app: {
     head: {
